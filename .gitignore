@@ -1,2 +1,6 @@
 __pycache__
 .*.sw*
+
+column_results.json
+column_totals.json
+results.json
