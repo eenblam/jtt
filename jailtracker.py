@@ -181,6 +181,8 @@ class Jail:
         if err is not None:
             return {}, f'Could not get inmates: {err}'
 
+        total = len(inmates)
+        print(f'Processing data for {total} inmates.')
         complete = []
         for summary in inmates:
             inmate, err = self.process_inmate(summary['ArrestNo'])
@@ -190,5 +192,10 @@ class Jail:
             inmate['summary'] = summary
             complete.append(inmate)
             time.sleep(NAP_LENGTH)
+
+        no_cases = len([x for x in complete if len(x['cases']) == 0])
+        no_charges = len([x for x in complete if len(x['charges']) == 0])
+        print(f'Number of inmates with no cases linked: {no_cases}/{total}')
+        print(f'Number of inmates with no charges linked: {no_charges}/{total}')
 
         return complete, None
