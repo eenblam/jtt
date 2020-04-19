@@ -185,7 +185,7 @@ class Jail:
             if err is not None:
                 print(err)
                 continue
-            inmate['Summary'] = summary
+            inmate['summary'] = summary
             complete.append(inmate)
             time.sleep(NAP_LENGTH)
 
