@@ -136,8 +136,10 @@ class Jail:
 
         data, err = data_or_error(response)
         if err is None:
-            # Inmate data format is ridiculous.
-            data = {d['Field']: d['Value'] for d in data}
+            # Inmate data format requires some cleaning..
+            # Have: {..., {'Field': 'FieldName:', 'Value': 'some value'}, ...}
+            # Want: {..., 'FieldName': 'some value', ...}
+            data = {d['Field'].rstrip(':'): d['Value'] for d in data}
         return data, err
 
     def get_cases(self, arrest_no):
