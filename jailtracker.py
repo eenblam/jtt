@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from datetime import datetime
 import re
 import time
 from  urllib.parse import urljoin
@@ -48,7 +49,8 @@ def data_or_error(response):
 
 
 class Jail:
-    def __init__(self, jail_url):
+    def __init__(self, jail_url, jail_name=''):
+        self.name = jail_name
         self.session = requests.Session()
         self.session.headers.update({
             'Accept': '*/*',
@@ -60,11 +62,22 @@ class Jail:
             'X-Requested-With': 'XMLHttpRequest'
             })
 
-        print(f"Getting session URL from {jail_url}...")
+        self.log(f"Getting session URL from {jail_url}...")
         err = self.set_session_info(jail_url)
         if err is not None:
+            self.log(err)
             raise RuntimeError(err)
 
+
+    def log(self, msg, *args):
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        formatted = msg.format(*args)
+        if self.name == '':
+            out = f'{timestamp} {formatted}'
+        else:
+            out = f'{timestamp} {self.name}: {formatted}'
+
+        print(out)
 
     def set_session_info(self, url):
         """Tries to set session info. Returns an error if unable to.
@@ -108,11 +121,11 @@ class Jail:
         # (Not a real timeout. We get a 200, but the `error` message is `session-time-out`.)
         knock_response = self.session.get(urljoin(LOCATION_BASE_URL, location))
         if knock_response.status_code != requests.codes.ok:
-            print(f'WARN Got bad status code in knock response: {knock_response.status_code}')
+            self.log(f'WARN Got bad status code in knock response: {knock_response.status_code}')
 
         # All good.
         self.url = urljoin(LOCATION_BASE_URL, target)
-        print(f'Using {self.url}.')
+        self.log(f'Using {self.url}.')
 
         self.session.headers.update({
             'Referer': location,
@@ -165,11 +178,11 @@ class Jail:
 
         cases, err = self.get_cases(arrest_no)
         if err is not None:
-            print(f'Could not get case data for {arrest_no}: {err}')
+            self.log(f'Could not get case data for {arrest_no}: {err}')
 
         charges, err = self.get_charges(arrest_no)
         if err is not None:
-            print(f'Could not get charge data for {arrest_no}: {err}')
+            self.log(f'Could not get charge data for {arrest_no}: {err}')
 
         data = {'inmate': inmate,
                 'cases': cases,
@@ -182,12 +195,12 @@ class Jail:
             return {}, f'Could not get inmates: {err}'
 
         total = len(inmates)
-        print(f'Processing data for {total} inmates.')
+        self.log(f'Processing data for {total} inmates.')
         complete = []
         for summary in inmates:
             inmate, err = self.process_inmate(summary['ArrestNo'])
             if err is not None:
-                print(err)
+                self.log(err)
                 continue
             inmate['summary'] = summary
             complete.append(inmate)
@@ -195,7 +208,7 @@ class Jail:
 
         no_cases = len([x for x in complete if len(x['cases']) == 0])
         no_charges = len([x for x in complete if len(x['charges']) == 0])
-        print(f'Number of inmates with no cases linked: {no_cases}/{total}')
-        print(f'Number of inmates with no charges linked: {no_charges}/{total}')
+        self.log(f'Number of inmates with no cases linked: {no_cases}/{total}')
+        self.log(f'Number of inmates with no charges linked: {no_charges}/{total}')
 
         return complete, None
