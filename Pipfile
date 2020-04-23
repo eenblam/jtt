@@ -9,6 +9,7 @@ chardet = "*"
 idna = "*"
 requests = "*"
 urllib3 = "*"
+airtable-python-wrapper = "*"
 
 [requires]
 python_version = "3.6"
