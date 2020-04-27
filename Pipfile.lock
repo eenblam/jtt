@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "edbf774e67d219ac66b0c7685933b183a78e2cb7bab6a5cdd65de894cfbd2078"
+            "sha256": "4b494234d627bc087715b605702835869d8298579185a30534a733ac46d5ff38"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,14 @@
         ]
     },
     "default": {
+        "airtable-python-wrapper": {
+            "hashes": [
+                "sha256:87fe8e7be6b0a3f64199f50fbc7869278ce5343eaf27b6a3dff025ea2aee4519",
+                "sha256:f0166b125e315163edf2b8f692155f0760c681ebad15f1f39cbb045d24f4f6c5"
+            ],
+            "index": "pypi",
+            "version": "==0.13.0"
+        },
         "certifi": {
             "hashes": [
                 "sha256:1d987a998c75633c40847cc966fcf5904906c920a7f17ef374f5aa4282abd304",
@@ -47,6 +55,13 @@
             ],
             "index": "pypi",
             "version": "==2.23.0"
+        },
+        "six": {
+            "hashes": [
+                "sha256:236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a",
+                "sha256:8f3cd2e254d8f793e7f3d6d9df77b92252b52637291d0f0da013c76ea2724b6c"
+            ],
+            "version": "==1.14.0"
         },
         "urllib3": {
             "hashes": [
