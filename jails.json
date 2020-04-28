@@ -1,0 +1,30 @@
+{
+    "DeSoto County": {
+        "name": "DeSoto",
+        "url": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/DeSoto_County_Ms"
+    },
+    "Forrest County": {
+        "name": "Forrest",
+        "url": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Forrest_County_MS"
+    },
+    "Hancock County": {
+        "name": "Hancock",
+        "url": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HANCOCK_COUNTY_MS"
+    },
+    "Lamar County": {
+        "name": "Lamar",
+        "url": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Lamar_County_Ms"
+    },
+    "Marion County": {
+        "name": "Marion",
+        "url": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Marion_County_Ms"
+    },
+    "Perry County": {
+        "name": "Perry",
+        "url": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Perry_County_MS"
+    },
+    "Yazoo County": {
+        "name": "Yazoo",
+        "url": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Yazoo_County_MS"
+    }
+}
