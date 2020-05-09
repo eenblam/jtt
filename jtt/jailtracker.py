@@ -171,18 +171,37 @@ class Jail:
         return data_or_error(response)
 
     def process_inmate(self, arrest_no):
+        """Fetches all data about a particular arrest number.
+        
+        Adds our own primary keys as needed.
+        """
         inmate, err = self.get_inmate(arrest_no)
         if err is not None:
             msg = f'Skipping {arrest_no}. Could not get inmate data: {err}'
             return {}, msg
+        else:
+            # tag with id
+            inmate['jtt_id'] = f'{self.name}_{arrest_no}'
 
         cases, err = self.get_cases(arrest_no)
         if err is not None:
             self.log(f'Could not get case data for {arrest_no}: {err}')
+        else:
+            for case in cases:
+                try:
+                    case['jtt_id'] = f'{self.name}_{case["CaseId"]}'
+                except KeyError:
+                    self.log(f'Failed to set jtt_id for a case for {arrest_no}')
 
         charges, err = self.get_charges(arrest_no)
         if err is not None:
             self.log(f'Could not get charge data for {arrest_no}: {err}')
+        else:
+            for charge in charges:
+                try:
+                    charge['jtt_id'] = f'{self.name}_{charge["ChargeId"]}'
+                except KeyError:
+                    self.log(f'Failed to set jtt_id for a charge for {arrest_no}')
 
         data = {'inmate': inmate,
                 'cases': cases,
@@ -202,7 +221,9 @@ class Jail:
             if err is not None:
                 self.log(err)
                 continue
-            inmate['summary'] = summary
+            #inmate['summary'] = summary
+            inmate['inmate'].update(summary)
+
             complete.append(inmate)
             time.sleep(NAP_LENGTH)
 

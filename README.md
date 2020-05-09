@@ -19,7 +19,7 @@ We're interested in answering questions about treatment of inmates, including bu
 JTT is **not** for your mugshot website, and support for downloading mugshots will not be added.
 
 ## Usage
-See `example.py` for a complete example of how to use JTT to get a JSON data set
+See `examples/example.py` for a complete example of how to use JTT to get a JSON data set
 of however many jails you're interested in.
 
 ### JailTracker URLs
