@@ -19,8 +19,10 @@ We're interested in answering questions about treatment of inmates, including bu
 JTT is **not** for your mugshot website, and support for downloading mugshots will not be added.
 
 ## Usage
-See `examples/example.py` for a complete example of how to use JTT to get a JSON data set
+See `examples/to_json.py` for a complete example of how to use JTT to get a JSON data set
 of however many jails you're interested in.
+
+You can also see `examples/airtable_worker.py` for an example of how to use Airtable as a storage backend.
 
 ### JailTracker URLs
 When you visit a JailTracker page, have a look at the address bar in your browser.
@@ -83,7 +85,7 @@ might have case or charge data available.
 
 ### Relational data stores
 It's easy to use JTT to produce a JSON file of all the data you pull.
-See the included `example.py`.
+See the included `examples/to_json.py`.
 
 However, if you want to use a relational data store,
 you need to know what tables and columns belong in your data model.
