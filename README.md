@@ -16,7 +16,7 @@ We're interested in answering questions about treatment of inmates, including bu
 * How long are inmates being held without being charged at all, or when charges are dropped before trial?
 * Does this data vary along demographic or geographic lines?
 
-JTT is **not** for your mugshot website, and support for downloading mugshots will not be added.
+JTT is **not** for your mugshot website, and support for collecting photos will not be added.
 
 ## Usage
 See `examples/to_json.py` for a complete example of how to use JTT to get a JSON data set
