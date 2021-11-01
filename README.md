@@ -1,5 +1,11 @@
 # JTT - a JailTracker tracker
 
+Update - JailTracker has made a few changes since I threw this together last year which JTT needs to be updated for:
+* They implemented a simple CAPTCHA. It's incredibly inaccessible (no audio). I'm hoping to push them on the accessibility issue, but I'll be looking at bypass solutions for JTT in parallel. This is public data.
+* They've done away with the weird session-key-mid-URI shenanigans I documented below. Standard session management should now work, but now JTT's URI's are broken.
+* There's possibly some other stuff that's changed with the API, but I haven't had time for a deep dive yet.
+
+
 JTT is a collaboration with another project:
 @bfeldman89's [jail_scrapers](https://github.com/bfeldman89/jail_scrapers),
 which focuses on gathering data about Mississippi jails.
