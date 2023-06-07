@@ -1,10 +1,16 @@
 # JTT - a JailTracker tracker
 
-Update - JailTracker has made a few changes since I threw this together last year which JTT needs to be updated for:
-* They implemented a simple CAPTCHA. It's incredibly inaccessible (no audio). I'm hoping to push them on the accessibility issue, but I'll be looking at bypass solutions for JTT in parallel. This is public data.
-* They've done away with the weird session-key-mid-URI shenanigans I documented below. Standard session management should now work, but now JTT's URI's are broken.
+## UPDATE: Archiving Indefinitely
+
+JailTracker has made a few changes since I threw this together in 2020 which JTT needs to be updated for:
+* They implemented a simple CAPTCHA. As of 2021, the captcha lacks audio accessibility features, which happen to be used in certain captcha bypass strategies. JailTracker could be pushed on the accessibility issue, given that this is data that they have an obligation to provide to the public. As of 2023, who knows, it's probably a lot easier to train an AI to bypass this now.
+* They've done away with the weird session-key-mid-URI shenanigans I documented below. As of 2021, standard session management should now work, but now JTT's URI's are broken.
 * There's possibly some other stuff that's changed with the API, but I haven't had time for a deep dive yet.
 
+Until I have time to pick this back up, I'm marking it as archived.
+
+
+## About JTT
 
 JTT is a collaboration with another project:
 @bfeldman89's [jail_scrapers](https://github.com/bfeldman89/jail_scrapers),
@@ -14,7 +20,6 @@ Please see https://bfeldman89.com/projects/jails/ for information about this wor
 As JailTracker is utilized in many places outside of Mississippi,
 this code has been separated from `jail_scrapers` for those interested in similar civic hacking projects.
 
-## About JTT
 JTT uses the API of the JailTracker software suite
 in order to aggregate information about inmates for civic purposes.
 We're interested in answering questions about treatment of inmates, including but not limited to:
