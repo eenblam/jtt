@@ -26,9 +26,6 @@ func main() {
 	}
 
 	for _, jail := range config.Jails {
-		if jail.Slug != "HANCOCK_COUNTY_MS" {
-			continue
-		}
 		err := UpdateJail(jail.Slug)
 		if err != nil {
 			panic(err)
