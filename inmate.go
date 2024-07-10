@@ -105,4 +105,6 @@ type Inmate struct {
 	SpecialArrestDate string `json:"specialArrestDate"`
 	// "Arresting Agency" (string "Circuit Court")
 	SpecialArrestingAgency string `json:"specialArrestingAgency"`
+	// "Arresting Officer" (string "SOME NAME")
+	SpecialArrestingOfficer string `json:"specialArrestingOfficer"`
 }

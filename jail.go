@@ -131,6 +131,8 @@ func (j *Jail) UpdateInmate(inmate *Inmate) error {
 			inmate.SpecialArrestDate = specialField.Value
 		case "Arresting Agency":
 			inmate.SpecialArrestingAgency = specialField.Value
+		case "Arresting Officer":
+			inmate.SpecialArrestingOfficer = specialField.Value
 		}
 	}
 
