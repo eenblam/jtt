@@ -1,16 +1,14 @@
-import base64
+"""
+Proof-of-concept Python module for working with the JailTracker API.
+"""
+
 import os
 import sys
 from dataclasses import dataclass
-from io import BytesIO
 from typing import Any
 
-import cv2
-import numpy as np
-import pytesseract
 import requests
 from openai import OpenAI
-from PIL import Image
 
 
 openai_api_key = os.getenv('OPENAI_API_KEY')
@@ -18,6 +16,7 @@ openai_api_key = os.getenv('OPENAI_API_KEY')
 openai_client = OpenAI(api_key=openai_api_key)
 
 MAX_CAPTCHA_ATTEMPTS = 5
+# This actually changes sometimes! e.g. https://omsweb.secure-gps.com
 OMS_URL = 'https://omsweb.public-safety-cloud.com'
 # Yes, "captcha" and "Captcha", as seen in the application traffic
 GET_CAPTCHA_CLIENT_URL = f'{OMS_URL}/jtclientweb/captcha/getnewcaptchaclient'
@@ -25,46 +24,20 @@ VALIDATE_CAPTCHA_URL = f'{OMS_URL}/jtclientweb/Captcha/validatecaptcha'
 # This key (like others) is typo'd. Using a variable here so it's easy to update if they fix the typo.
 CAPTCHA_REQUIRED_KEY = 'captchaRequred'
 
-# Decode the base64 image
-def extract_text_from_inline_image(inline_image: str) -> str:
-    img_prefix = 'data:image/gif;base64,'
-    if not inline_image.startswith(img_prefix):
-        raise ValueError(f'Unexpected image format: {inline_image}', file=sys.stderr)
-
-    image_base64 = inline_image[len(img_prefix):]
-    return extract_text_from_base64(image_base64)
-
-def extract_text_from_base64(base64_image: str) -> str:
-    image_data = base64.b64decode(base64_image)
-    image = Image.open(BytesIO(image_data))
-    return extract_text_from_image(image)
-
-def extract_text_from_image(image: str) -> str:
-    """
-    Extract text from image, removing any whitespace
-    """
-    # Pre-process to improve Tesseract performance
-    # Convert the image to an OpenCV format
-    image_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
-    # Convert to grayscale
-    gray_image = cv2.cvtColor(image_cv, cv2.COLOR_BGR2GRAY)
-    # Apply thresholding to get a binary image
-    _, binary_image = cv2.threshold(gray_image, 150, 255, cv2.THRESH_BINARY_INV)
-    #cv2.imshow('Enhanced', binary_image)
-    #cv2.waitKey(0)
-    # Convert back to PIL image
-    enhanced_image = Image.fromarray(cv2.cvtColor(binary_image, cv2.COLOR_GRAY2RGB))
-
-    text = pytesseract.image_to_string(enhanced_image, config='--psm 8').strip()
-
-    # Remove any whitespace in the output
-    return ''.join(text.split())
-
+def err(*args, **kwargs) -> None:
+    """Wrapper for printing to stderr"""
+    print(*args, file=sys.stderr, **kwargs)
 
 @dataclass
 class Jail:
     """
-    TODO docstring
+    Encapsulates both a jail's list of inmate data and the cross-request state needed to interact with the jail's API.
+
+    At time of writing, the JailTracker API requires:
+
+    * a captcha to be solved before initially requesting data (each captcha corresponds to a "captcha key")
+    * an additional captcha to be solved after every 5th request for data
+    * an "offender view key" that's updated with each request for data.
     """
     # Name of the jail, as it appears in the URL
     name: str
@@ -72,7 +45,7 @@ class Jail:
     # Captcha key for this jail; updates ... sometimes? But has to be provided per-request.
     captcha_key: str
     #TODO improve typing here
-    #TODO consider using our own terminology here; "offenders", really???
+    #TODO consider using our own terminology here. "Offenders" is what JT uses, but it's stupid.
     offenders: dict[str, Any]
     # Each request after validation updates this key!
     offender_view_key: str
@@ -80,7 +53,7 @@ class Jail:
     @classmethod
     def connect(cls, jail_name: str) -> 'Jail':
         """
-        TODO docstring
+        Solves an initial captcha, gets view key, and requests initial data for the given jail name.
         """
         session = requests.Session()
         session.headers.update({
@@ -112,7 +85,6 @@ class Jail:
         }
         resp = jail.session.post(api_url, json=data)
         resp_data = resp.json()
-        #TODO handle KeyError here
         try:
             captcha_required = resp_data[CAPTCHA_REQUIRED_KEY]
             jail.captcha_key = resp_data['captchaKey']
@@ -120,7 +92,7 @@ class Jail:
             # (each request updates this!)
             jail.offender_view_key = resp_data['offenderViewKey']
         except KeyError as e:
-            print(resp_data, file=sys.stderr)
+            err(resp_data)
             raise e
 
         if captcha_required:
@@ -138,7 +110,7 @@ class Jail:
 
         Note that an arrest number does not uniquely identify an inmate, since someone could be arrested multiple times.
         """
-        #TODO better return type
+        #TODO this could use a better return type once a dataclass is implemented
         for _ in (1, 2):  # Extra attempt in case we need to process captcha
             # /jtclientweb/Offender/HANCOCK_COUNTY_MS/49949/offenderbucket/939027534
             location = f'{OMS_URL}/jtclientweb/Offender/{self.name}/{arrest_no}/offenderbucket/{self.offender_view_key}'
@@ -200,8 +172,7 @@ class Jail:
                 captcha_key = resp_data['captchaKey']
                 captcha_image = resp_data['captchaImage']
             except KeyError as e:
-                #TODO better logging, raise here
-                print(e, file=sys.stderr)
+                err(e)
                 raise e
 
             #text = extract_text_from_inline_image(captcha_image)
@@ -222,19 +193,16 @@ class Jail:
                 captcha_key = resp_data['captchaKey']
                 captcha_matched = resp_data['captchaMatched']
             except KeyError as e:
-                #TODO better logging, raise here
-                print(resp_data, file=sys.stderr)
-                print(data)
+                err(f'Missing key in response. Sent:\n{data}\n\Got:\n{resp_data}')
                 raise e
 
             if captcha_matched:
                 print(f'Matched captcha "{text}" and got captcha key "{captcha_key}"')
                 self.captcha_key = captcha_key
                 return captcha_key
-            print(f'({i}/{MAX_CAPTCHA_ATTEMPTS}) Failed to match captcha. Detected "{text}".')
+            err(f'({i}/{MAX_CAPTCHA_ATTEMPTS}) Failed to match captcha. Detected "{text}".')
 
-        #TODO raise on failure, or just return None?
-        print('Failed to validate captcha')
+        raise RuntimeError(f'Failed to validate captcha after {MAX_CAPTCHA_ATTEMPTS} attempts')
 
 def get_jail_url(name: str) -> str:
     # Not sure this is needed
