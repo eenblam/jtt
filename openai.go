@@ -69,8 +69,8 @@ type ResponseChoice struct {
 }
 
 // Get the payload to request a captcha solve from GPT-4o
-func getCaptchaPayload(inlineImage string) RequestPayload {
-	return RequestPayload{
+func getCaptchaPayload(inlineImage string) *RequestPayload {
+	return &RequestPayload{
 		Model: "gpt-4o",
 		Messages: []Message{
 			{
@@ -105,7 +105,7 @@ func solveCaptchaOpenAI(inline_image string) (string, error) {
 	headers := map[string][]string{
 		"Authorization": {"Bearer " + OpenAIAPIKey},
 	}
-	err := RequestJSONIntoStruct[RequestPayload, CompletionResponse]("POST", OpenAICompletionsURL, headers, completion, &payload)
+	err := PostJSON[RequestPayload, CompletionResponse](OpenAICompletionsURL, headers, payload, completion)
 	if err != nil {
 		return "", fmt.Errorf("error from OpenAI: %w", err)
 

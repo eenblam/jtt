@@ -51,7 +51,7 @@ func NewJail(domainName, name string) (*Jail, error) {
 		UserCode: "",
 	}
 	jailResponse := &JailResponse{}
-	err := RequestJSONIntoStruct("POST", j.getJailAPIURL(), nil, jailResponse, payload)
+	err := PostJSON[CaptchaProtocol, JailResponse](j.getJailAPIURL(), nil, payload, jailResponse)
 	if err != nil {
 		return nil, fmt.Errorf("failed to request initial jail data: %w", err)
 	}

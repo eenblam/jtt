@@ -8,13 +8,28 @@ import (
 	"net/http"
 )
 
-func RequestJSONIntoStruct[P interface{}, T interface{}](method string, url string, headers map[string][]string, into *T, payload *P) error {
+// GetJSON makes a GET request to url, then unmarshals the response body from JSON.
+// Additional headers can be passed as a map.
+func GetJSON[Res interface{}](url string, headers map[string][]string, responseBody *Res) error {
+	return RequestJSON[interface{}, Res]("GET", url, headers, nil, responseBody)
+}
+
+// PostJSON makes a POST request to url, marshaling the request body to JSON and unmarshaling the response body from JSON.
+// Method is set by argument, and additional headers can be passed as a map.
+func PostJSON[Req interface{}, Res interface{}](url string, headers map[string][]string, requestBody *Req, responseBody *Res) error {
+	return RequestJSON[Req, Res]("POST", url, headers, requestBody, responseBody)
+}
+
+// RequestJSON makes an HTTP request, marshaling the request body to JSON and unmarshaling the response body from JSON.
+// Method is set by argument, and additional headers can be passed as a map.
+// For GET requests, Req should be interface{} and requestBody should be nil.
+func RequestJSON[Req interface{}, Res interface{}](method string, url string, headers map[string][]string, requestBody *Req, responseBody *Res) error {
 	var req *http.Request
 	var err error
 
-	if payload != nil { // If payload provided, marshal to JSON. Should be missing for GET.
+	if requestBody != nil { // If payload provided, marshal to JSON. Should be missing for GET.
 		// Don't shadow outer err in next assignment
-		payloadJson, marshalErr := json.Marshal(payload)
+		payloadJson, marshalErr := json.Marshal(requestBody)
 		if marshalErr != nil {
 			return fmt.Errorf("failed to marshal payload to JSON: %w", err)
 		}
@@ -46,7 +61,7 @@ func RequestJSONIntoStruct[P interface{}, T interface{}](method string, url stri
 	if err != nil {
 		return fmt.Errorf("failed to read POST jail data body: %w", err)
 	}
-	err = json.Unmarshal(body, into)
+	err = json.Unmarshal(body, responseBody)
 	if err != nil {
 		return fmt.Errorf("failed to unmarshal POST jail data body: %w", err)
 	}

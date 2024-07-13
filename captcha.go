@@ -41,7 +41,7 @@ func ProcessCaptcha(jail *Jail) (string, error) {
 
 	// Get the captcha key
 	challenge := &CaptchaProtocol{}
-	err := RequestJSONIntoStruct[interface{}, CaptchaProtocol]("GET", getCaptchaClientURL, headers, challenge, nil)
+	err := GetJSON[CaptchaProtocol](getCaptchaClientURL, headers, challenge)
 	if err != nil {
 		return "", fmt.Errorf("failed to GET captcha key: %w", err)
 	}
@@ -56,7 +56,7 @@ func ProcessCaptcha(jail *Jail) (string, error) {
 
 	// Submit response
 	results := &CaptchaAttemptResults{}
-	err = RequestJSONIntoStruct[CaptchaProtocol, CaptchaAttemptResults]("POST", validateCaptchaURL, headers, results, challenge)
+	err = PostJSON[CaptchaProtocol, CaptchaAttemptResults](validateCaptchaURL, headers, challenge, results)
 	if err != nil {
 		return "", fmt.Errorf("failed captcha solution: %w", err)
 	}

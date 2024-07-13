@@ -134,7 +134,7 @@ func (i *Inmate) Update(j *Jail) error {
 	// (Note: this seems to not always be the case, but it's not clear to me what triggers it.
 	// Sometimes I immediately get captcha'd every 5 requests, sometimes it's only on the first one.)
 	for attempt := 0; attempt < 2; attempt++ {
-		err := RequestJSONIntoStruct[CaptchaProtocol, InmateResponse]("POST", inmateURL, nil, inmateResponse, payload)
+		err := PostJSON[CaptchaProtocol, InmateResponse](inmateURL, nil, payload, inmateResponse)
 		if err != nil {
 			return fmt.Errorf("failed to update inmate: %w", err)
 		}
