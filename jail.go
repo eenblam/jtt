@@ -103,7 +103,7 @@ func (j *Jail) UpdateInmates() error {
 			continue
 		}
 		log.Printf("Updated inmate \"%s\". Cases: %d Charges: %d Holds: %d Booked: %s",
-			inmate.ArrestNo, len(inmate.Cases), len(inmate.Charges), len(inmate.Holds), inmate.SpecialBookingDate,
+			inmate.ArrestNo, len(inmate.Cases), len(inmate.Charges), len(inmate.Holds), inmate.OriginalBookDateTime,
 		)
 	}
 	return nil
