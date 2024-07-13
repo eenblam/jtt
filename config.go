@@ -9,6 +9,8 @@ import (
 type JailConfig struct {
 	// How we describe the jail
 	PrettyName string
+	// Domain for the jail. Usually "omsweb.public-safety-cloud.com", but not always!
+	DomainName string
 	// Used in API URLs
 	Slug string
 }

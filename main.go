@@ -25,21 +25,26 @@ func main() {
 		panic(err)
 	}
 
-	for _, jail := range config.Jails {
-		err := UpdateJail(jail.Slug)
+	for _, jailConfig := range config.Jails {
+		// Currently, most jails don't have a domain name in the config since I haven't looked them up yet.
+		if jailConfig.DomainName == "" {
+			jailConfig.DomainName = DefaultDomainName
+		}
+
+		err := UpdateJail(&jailConfig)
 		if err != nil {
 			panic(err)
 		}
 	}
 }
 
-func UpdateJail(jailName string) error {
+func UpdateJail(jailConfig *JailConfig) error {
 	var jail *Jail
-	filename := JailFileName(jailName)
+	filename := JailFileName(jailConfig.Slug)
 	file, err := os.OpenFile(filename, os.O_RDWR|os.O_EXCL, 0644)
 	if errors.Is(err, os.ErrNotExist) { // File doesn't exist; create it
 		log.Printf("Cache miss for \"%s\"", filename)
-		jail, err := CrawlJail(jailName)
+		jail, err := CrawlJail(jailConfig.DomainName, jailConfig.Slug)
 		if err != nil {
 			return err
 		}

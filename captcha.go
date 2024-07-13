@@ -10,13 +10,6 @@ const (
 	MAX_CAPTCHA_ATTEMPTS = 5
 	// Yes, "Requred". This key (like others) is typo'd. Using a variable here so it's easy to update if they fix the typo.
 	CAPTCHA_REQUIRED_KEY = "captchaRequred"
-	OMS_URL              = "https://omsweb.public-safety-cloud.com"
-)
-
-var (
-	// Yes, "captcha" and "Captcha", as seen in the application traffic
-	GET_CAPTCHA_CLIENT_URL = fmt.Sprintf("%s/jtclientweb/captcha/getnewcaptchaclient", OMS_URL)
-	VALIDATE_CAPTCHA_URL   = fmt.Sprintf("%s/jtclientweb/Captcha/validatecaptcha", OMS_URL)
 )
 
 // Response from GET GET_CAPTCHA_CLIENT_URL and request to POST VALIDATE_CAPTCHA_URL
@@ -36,17 +29,21 @@ type CaptchaAttemptResults struct {
 	CaptchaKey     string `json:"captchaKey"`
 }
 
-// ProcessCaptcha retrieves and solves the captcha for the given jail name, returning the captchaKey.
-func ProcessCaptcha(name string) (string, error) {
+// ProcessCaptcha retrieves and solves the captcha for the given jail, returning the captchaKey.
+func ProcessCaptcha(jail *Jail) (string, error) {
 	// Referer should be the jail's URL; used for redirection in web client.
 	// May not affect us, but matches "normal" traffic.
 	headers := map[string][]string{
-		"Referer": {getJailURL(name)},
+		"Referer": {jail.getJailURL()},
 	}
+
+	// Yes, "captcha" and "Captcha", as seen in the application traffic
+	getCaptchaClientURL := fmt.Sprintf("https://%s/jtclientweb/captcha/getnewcaptchaclient", jail.DomainName)
+	validateCaptchaURL := fmt.Sprintf("https://%s/jtclientweb/Captcha/validatecaptcha", jail.DomainName)
 
 	// Get the captcha key
 	challenge := &CaptchaProtocol{}
-	err := RequestJSONIntoStruct[interface{}, CaptchaProtocol]("GET", GET_CAPTCHA_CLIENT_URL, headers, challenge, nil)
+	err := RequestJSONIntoStruct[interface{}, CaptchaProtocol]("GET", getCaptchaClientURL, headers, challenge, nil)
 	if err != nil {
 		return "", fmt.Errorf("failed to GET captcha key: %w", err)
 	}
@@ -61,7 +58,7 @@ func ProcessCaptcha(name string) (string, error) {
 
 	// Submit response
 	results := &CaptchaAttemptResults{}
-	err = RequestJSONIntoStruct[CaptchaProtocol, CaptchaAttemptResults]("POST", VALIDATE_CAPTCHA_URL, headers, results, challenge)
+	err = RequestJSONIntoStruct[CaptchaProtocol, CaptchaAttemptResults]("POST", validateCaptchaURL, headers, results, challenge)
 	if err != nil {
 		return "", fmt.Errorf("failed captcha solution: %w", err)
 	}

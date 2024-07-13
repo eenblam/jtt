@@ -7,6 +7,8 @@ import (
 	"time"
 )
 
+const DefaultDomainName = "omsweb.public-safety-cloud.com"
+
 type JailResponse struct {
 	// Yes, "Requred", this is in their API.
 	CaptchaRequired bool `json:"captchaRequred"`
@@ -19,6 +21,8 @@ type JailResponse struct {
 }
 
 type Jail struct {
+	// Domain for the jail. Usually "omsweb.public-safety-cloud.com", but not always!
+	DomainName string
 	// Name of the jail, as it appears in the URL
 	Name string
 	// This is sent with each request, and sometimes updated
@@ -29,9 +33,10 @@ type Jail struct {
 	OffenderViewKey int
 }
 
-func NewJail(name string) (*Jail, error) {
+func NewJail(domainName, name string) (*Jail, error) {
 	j := &Jail{
-		Name: name,
+		DomainName: domainName,
+		Name:       name,
 	}
 	if err := j.updateCaptcha(); err != nil {
 		return nil, fmt.Errorf("failed to update captcha: %w", err)
@@ -46,7 +51,7 @@ func NewJail(name string) (*Jail, error) {
 		UserCode: "",
 	}
 	jailResponse := &JailResponse{}
-	err := RequestJSONIntoStruct("POST", getJailAPIURL(name), nil, jailResponse, payload)
+	err := RequestJSONIntoStruct("POST", j.getJailAPIURL(), nil, jailResponse, payload)
 	if err != nil {
 		return nil, fmt.Errorf("failed to request initial jail data: %w", err)
 	}
@@ -64,7 +69,7 @@ func (j *Jail) updateCaptcha() error {
 	var captchaKey string
 	var err error
 	for i := 0; i < MAX_CAPTCHA_ATTEMPTS; i++ {
-		captchaKey, err = ProcessCaptcha(j.Name)
+		captchaKey, err = ProcessCaptcha(j)
 		if err != nil {
 			log.Printf("failed to solve captcha: %v", err)
 			continue
@@ -83,8 +88,8 @@ func (j *Jail) updateCaptcha() error {
 
 func (j *Jail) UpdateInmate(inmate *Inmate) error {
 	//"<OMS_URL>/jtclientweb/Offender/<JAIL_NAME>/<ARREST_NO>/offenderbucket/<OFFENDER_VIEW_KEY>",
-	location := fmt.Sprintf("%s/jtclientweb/Offender/%s/%s/offenderbucket/%d",
-		OMS_URL,
+	location := fmt.Sprintf("https://%s/jtclientweb/Offender/%s/%s/offenderbucket/%d",
+		j.DomainName,
 		j.Name,
 		inmate.ArrestNo,
 		j.OffenderViewKey,
@@ -139,17 +144,21 @@ func (j *Jail) UpdateInmate(inmate *Inmate) error {
 	return nil
 }
 
-func getJailURL(name string) string {
-	return fmt.Sprintf("https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/%s", name)
+// Get the URL for the jail's main page, as it would be accessed by a web browser.
+// Jails have their own URL within the domain, but the captcha service needs to know which jail
+// the captcha corresponds to, so it looks for this URL in the Referer header.
+func (j Jail) getJailURL() string {
+	return fmt.Sprintf("https://%s/jtclientweb/jailtracker/index/%s", j.DomainName, j.Name)
 }
 
-func getJailAPIURL(name string) string {
-	return fmt.Sprintf("https://omsweb.public-safety-cloud.com/jtclientweb/Offender/%s", name)
+// Get the URL for the jail's JSON API, which will list all inmates.
+func (j Jail) getJailAPIURL() string {
+	return fmt.Sprintf("https://%s/jtclientweb/Offender/%s", j.DomainName, j.Name)
 }
 
-func CrawlJail(name string) (*Jail, error) {
+func CrawlJail(baseURL, name string) (*Jail, error) {
 	log.Printf("Crawling jail: %s", name)
-	j, err := NewJail(name)
+	j, err := NewJail(baseURL, name)
 	if err != nil {
 		return nil, fmt.Errorf("failed to initialize jail: %w", err)
 	}
