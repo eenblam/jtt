@@ -11,19 +11,19 @@ import (
 // GetJSON makes a GET request to url, then unmarshals the response body from JSON.
 // Additional headers can be passed as a map.
 func GetJSON[Res interface{}](url string, headers map[string][]string, responseBody *Res) error {
-	return RequestJSON[interface{}, Res]("GET", url, headers, nil, responseBody)
+	return requestJSON[interface{}, Res]("GET", url, headers, nil, responseBody)
 }
 
 // PostJSON makes a POST request to url, marshaling the request body to JSON and unmarshaling the response body from JSON.
 // Method is set by argument, and additional headers can be passed as a map.
 func PostJSON[Req interface{}, Res interface{}](url string, headers map[string][]string, requestBody *Req, responseBody *Res) error {
-	return RequestJSON[Req, Res]("POST", url, headers, requestBody, responseBody)
+	return requestJSON[Req, Res]("POST", url, headers, requestBody, responseBody)
 }
 
-// RequestJSON makes an HTTP request, marshaling the request body to JSON and unmarshaling the response body from JSON.
+// requestJSON makes an HTTP request, marshaling the request body to JSON and unmarshaling the response body from JSON.
 // Method is set by argument, and additional headers can be passed as a map.
 // For GET requests, Req should be interface{} and requestBody should be nil.
-func RequestJSON[Req interface{}, Res interface{}](method string, url string, headers map[string][]string, requestBody *Req, responseBody *Res) error {
+func requestJSON[Req interface{}, Res interface{}](method string, url string, headers map[string][]string, requestBody *Req, responseBody *Res) error {
 	var req *http.Request
 	var err error
 
