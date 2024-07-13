@@ -15,21 +15,21 @@ type JailConfig struct {
 	Slug string
 }
 
-type Config struct {
+type AppConfig struct {
 	Jails []JailConfig
 	// Directory to cache jail data
 	Cache string
 }
 
-func LoadConfig(filename string) (*Config, error) {
+// Marshal data from filename into provided config
+func LoadConfig(config *AppConfig, filename string) error {
 	file, err := os.ReadFile(filename)
 	if err != nil {
-		return nil, fmt.Errorf("failed to read config file: %w", err)
+		return fmt.Errorf("failed to read config file: %w", err)
 	}
-	config := &Config{}
 	err = json.Unmarshal(file, config)
 	if err != nil {
-		return nil, fmt.Errorf("failed to unmarshal config file: %w", err)
+		return fmt.Errorf("failed to unmarshal config file: %w", err)
 	}
-	return config, nil
+	return nil
 }

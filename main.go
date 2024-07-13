@@ -7,25 +7,34 @@ import (
 	"io"
 	"log"
 	"os"
+	"path"
 	"time"
 )
 
 var OPENAI_API_KEY string
+
+var Config = &AppConfig{}
 
 func init() {
 	OPENAI_API_KEY = os.Getenv("OPENAI_API_KEY")
 	if OPENAI_API_KEY == "" {
 		log.Fatal("OPENAI_API_KEY must be set")
 	}
-}
 
-func main() {
-	config, err := LoadConfig("config.json")
+	configPath := os.Getenv("JTT_CONFIG_DIR")
+	if configPath == "" {
+		configPath = "config.json"
+	} else {
+		log.Printf("Using config file from environment (JTT_CONFIG_DIR=\"%s\"", configPath)
+	}
+	err := LoadConfig(Config, configPath)
 	if err != nil {
 		panic(err)
 	}
+}
 
-	for _, jailConfig := range config.Jails {
+func main() {
+	for _, jailConfig := range Config.Jails {
 		// Currently, most jails don't have a domain name in the config since I haven't looked them up yet.
 		if jailConfig.DomainName == "" {
 			jailConfig.DomainName = DefaultDomainName
@@ -80,5 +89,6 @@ func SaveJail(jail *Jail) error {
 
 func JailFileName(jailName string) string {
 	today := time.Now().Format("2006-01-02")
-	return fmt.Sprintf("cache/%s-%s.json", jailName, today)
+	filename := fmt.Sprintf("%s-%s.json", jailName, today)
+	return path.Join(Config.Cache, filename)
 }
