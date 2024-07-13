@@ -31,7 +31,7 @@ func RequestJSON[Req interface{}, Res interface{}](method string, url string, he
 		// Don't shadow outer err in next assignment
 		payloadJson, marshalErr := json.Marshal(requestBody)
 		if marshalErr != nil {
-			return fmt.Errorf("failed to marshal payload to JSON: %w", err)
+			return fmt.Errorf("failed to marshal request body to JSON: %w", err)
 		}
 		req, err = http.NewRequest(method, url, bytes.NewBuffer(payloadJson))
 	} else { // Probably a GET
@@ -55,15 +55,15 @@ func RequestJSON[Req interface{}, Res interface{}](method string, url string, he
 
 	defer res.Body.Close()
 	if res.StatusCode != 200 {
-		return fmt.Errorf("got non-200 status for jail data: %d", res.StatusCode)
+		return fmt.Errorf("got non-200 status: %d", res.StatusCode)
 	}
 	body, err := io.ReadAll(res.Body)
 	if err != nil {
-		return fmt.Errorf("failed to read POST jail data body: %w", err)
+		return fmt.Errorf("failed to read response body: %w", err)
 	}
 	err = json.Unmarshal(body, responseBody)
 	if err != nil {
-		return fmt.Errorf("failed to unmarshal POST jail data body: %w", err)
+		return fmt.Errorf("failed to unmarshal response body: %w", err)
 	}
 
 	return nil
