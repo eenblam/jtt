@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"log"
+)
+
 type Case struct {
 	CaseNo     string  `json:"caseNo"`
 	Status     string  `json:"status"`
@@ -107,4 +112,68 @@ type Inmate struct {
 	SpecialArrestingAgency string `json:"specialArrestingAgency"`
 	// "Arresting Officer" (string "SOME NAME")
 	SpecialArrestingOfficer string `json:"specialArrestingOfficer"`
+}
+
+func (i *Inmate) Update(j *Jail) error {
+	//"<OMS_URL>/jtclientweb/Offender/<JAIL_NAME>/<ARREST_NO>/offenderbucket/<OFFENDER_VIEW_KEY>",
+	inmateURL := fmt.Sprintf("https://%s/jtclientweb/Offender/%s/%s/offenderbucket/%d",
+		j.DomainName,
+		j.Name,
+		i.ArrestNo,
+		j.OffenderViewKey,
+	)
+	payload := &CaptchaProtocol{
+		CaptchaKey:   j.CaptchaKey,
+		CaptchaImage: "",
+		UserCode:     "",
+	}
+	inmateResponse := &InmateResponse{}
+
+	// We can only make so many requests for data before we need to solve a captcha again.
+	// Here, we try to solve the captcha and then retry the request once.
+	// (Note: this seems to not always be the case, but it's not clear to me what triggers it.
+	// Sometimes I immediately get captcha'd every 5 requests, sometimes it's only on the first one.)
+	for attempt := 0; attempt < 2; attempt++ {
+		err := RequestJSONIntoStruct[CaptchaProtocol, InmateResponse]("POST", inmateURL, nil, inmateResponse, payload)
+		if err != nil {
+			return fmt.Errorf("failed to update inmate: %w", err)
+		}
+		if !inmateResponse.CaptchaRequired { // Success!
+			break
+		}
+		if attempt == 0 { // Try to refresh captcha
+			log.Printf("Captcha required for inmate \"%s\"; refreshing", i.ArrestNo)
+			err = j.updateCaptcha()
+			if err != nil {
+				return fmt.Errorf("failed to update inmate due to failed captcha: %w", err)
+			}
+		} else { // Already retried
+			return fmt.Errorf("captcha required for inmate after refresh. Response: %v", inmateResponse)
+		}
+	}
+
+	// Update the jail's view key
+	j.OffenderViewKey = inmateResponse.OffenderViewKey
+	// Update the inmate's data
+	i.Cases = inmateResponse.Cases
+	i.Charges = inmateResponse.Charges
+	i.Holds = inmateResponse.Holds
+	for _, specialField := range inmateResponse.SpecialFields {
+		switch specialField.LabelText {
+		case "Sched Release":
+			i.SpecialSchedRelease = specialField.Value
+		case "Booking Date":
+			i.SpecialBookingDate = specialField.Value
+		case "Date Released":
+			i.SpecialDateReleased = specialField.Value
+		case "Arrest Date":
+			i.SpecialArrestDate = specialField.Value
+		case "Arresting Agency":
+			i.SpecialArrestingAgency = specialField.Value
+		case "Arresting Officer":
+			i.SpecialArrestingOfficer = specialField.Value
+		}
+	}
+
+	return nil
 }

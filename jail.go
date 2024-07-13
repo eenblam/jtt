@@ -86,61 +86,26 @@ func (j *Jail) updateCaptcha() error {
 	return nil
 }
 
-func (j *Jail) UpdateInmate(inmate *Inmate) error {
-	//"<OMS_URL>/jtclientweb/Offender/<JAIL_NAME>/<ARREST_NO>/offenderbucket/<OFFENDER_VIEW_KEY>",
-	location := fmt.Sprintf("https://%s/jtclientweb/Offender/%s/%s/offenderbucket/%d",
-		j.DomainName,
-		j.Name,
-		inmate.ArrestNo,
-		j.OffenderViewKey,
-	)
-	payload := &CaptchaProtocol{
-		CaptchaKey:   j.CaptchaKey,
-		CaptchaImage: "",
-		UserCode:     "",
-	}
-	inmateResponse := &InmateResponse{}
-	for i := 0; i < 2; i++ { // Allow a retry with a fresh captcha
-		err := RequestJSONIntoStruct[CaptchaProtocol, InmateResponse]("POST", location, nil, inmateResponse, payload)
+// UpdateInmates updates all inmates in the jail.
+// Currently returns only a nil error, but reserving one here for future use.
+func (j *Jail) UpdateInmates() error {
+	for i := range j.Offenders {
+		// Chill out for a bit to be especially gentle to their server
+		// Convert time.Second (duration in nanoseconds) to float, scale to 0.5-1.5 seconds
+		duration := time.Duration((0.5 + rand.Float64()) * float64(time.Second))
+		time.Sleep(duration)
+
+		inmate := &j.Offenders[i]
+		//err := j.UpdateInmate(inmate)
+		err := inmate.Update(j)
 		if err != nil {
-			return fmt.Errorf("failed to update inmate: %w", err)
-
+			log.Printf("failed to update inmate \"%s\": %v", inmate.ArrestNo, err)
+			continue
 		}
-		if !inmateResponse.CaptchaRequired { // Success!
-			break
-		}
-		if i == 0 { // Try to refresh captcha
-			err = j.updateCaptcha()
-			if err != nil {
-				return fmt.Errorf("failed to update inmate due to failed captcha: %w", err)
-			}
-		} else { // Already retried
-			return fmt.Errorf("captcha required for inmate after refresh. Response: %v", inmateResponse)
-		}
+		log.Printf("Updated inmate \"%s\". Cases: %d Charges: %d Holds: %d Booked: %s",
+			inmate.ArrestNo, len(inmate.Cases), len(inmate.Charges), len(inmate.Holds), inmate.SpecialBookingDate,
+		)
 	}
-	// Update the jail's view key
-	j.OffenderViewKey = inmateResponse.OffenderViewKey
-	// Update the inmate's data
-	inmate.Cases = inmateResponse.Cases
-	inmate.Charges = inmateResponse.Charges
-	inmate.Holds = inmateResponse.Holds
-	for _, specialField := range inmateResponse.SpecialFields {
-		switch specialField.LabelText {
-		case "Sched Release":
-			inmate.SpecialSchedRelease = specialField.Value
-		case "Booking Date":
-			inmate.SpecialBookingDate = specialField.Value
-		case "Date Released":
-			inmate.SpecialDateReleased = specialField.Value
-		case "Arrest Date":
-			inmate.SpecialArrestDate = specialField.Value
-		case "Arresting Agency":
-			inmate.SpecialArrestingAgency = specialField.Value
-		case "Arresting Officer":
-			inmate.SpecialArrestingOfficer = specialField.Value
-		}
-	}
-
 	return nil
 }
 
@@ -164,21 +129,9 @@ func CrawlJail(baseURL, name string) (*Jail, error) {
 	}
 	log.Printf("Found %d inmates", len(j.Offenders))
 
-	for i := range j.Offenders {
-		// Chill out for a bit to be especially gentle to their server
-		// Convert time.Second (duration in nanoseconds) to float, scale to 0.5-1.5 seconds
-		duration := time.Duration((0.5 + rand.Float64()) * float64(time.Second))
-		time.Sleep(duration)
-
-		inmate := &j.Offenders[i]
-		err := j.UpdateInmate(inmate)
-		if err != nil {
-			log.Printf("failed to update inmate \"%s\": %v", inmate.ArrestNo, err)
-			continue
-		}
-		log.Printf("Updated inmate \"%s\". Cases: %d Charges: %d Holds: %d Booked: %s",
-			inmate.ArrestNo, len(inmate.Cases), len(inmate.Charges), len(inmate.Holds), inmate.SpecialBookingDate,
-		)
+	err = j.UpdateInmates()
+	if err != nil {
+		return nil, fmt.Errorf("failed to update inmates: %w", err)
 	}
 	return j, nil
 }
