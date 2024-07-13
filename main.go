@@ -40,54 +40,60 @@ func main() {
 			jailConfig.DomainName = DefaultDomainName
 		}
 
-		err := UpdateJail(&jailConfig)
+		// Right now we do nothing here. Later, the cached data can be used to update a remote database.
+		_, err := LoadJailCached(&jailConfig)
 		if err != nil {
 			panic(err)
 		}
 	}
 }
 
-func UpdateJail(jailConfig *JailConfig) error {
+// LoadJailCached will load the jail data from cache if present, or crawl the jail and save it to the configured
+// cache directory if not.
+func LoadJailCached(jailConfig *JailConfig) (*Jail, error) {
 	var jail *Jail
-	filename := JailFileName(jailConfig.Slug)
+	filename := JailCachePath(jailConfig.Slug)
 	file, err := os.OpenFile(filename, os.O_RDWR|os.O_EXCL, 0644)
 	if errors.Is(err, os.ErrNotExist) { // File doesn't exist; create it
 		log.Printf("Cache miss for \"%s\"", filename)
 		jail, err := CrawlJail(jailConfig.DomainName, jailConfig.Slug)
 		if err != nil {
-			return err
+			return nil, err
 		}
 		err = SaveJail(jail)
 		if err != nil {
-			return err
+			return nil, err
 		}
 	} else if err != nil {
-		return err
+		return nil, err
 	} else { // File exists; load from cache
 		log.Printf("Loading jail data from \"%s\"", filename)
 		data, err := io.ReadAll(file)
 		if err != nil {
-			return err
+			return nil, err
 		}
 		err = json.Unmarshal(data, &jail)
 		if err != nil {
-			return err
+			return nil, err
 		}
 	}
-	return nil
+	return jail, nil
 }
 
+// SaveJail saves the jail data to the configured cache directory.
 func SaveJail(jail *Jail) error {
 	data, err := json.MarshalIndent(jail, "", "  ")
 	if err != nil {
 		return fmt.Errorf("failed to marshal jail data: %w", err)
 	}
-	filename := JailFileName(jail.Name)
+	filename := JailCachePath(jail.Name)
 	log.Printf("Caching jail data as \"%s\"", filename)
 	return os.WriteFile(filename, data, 0644)
 }
 
-func JailFileName(jailName string) string {
+// JailCachePath returns the path to the current jail cache file.
+// Caching is currently implemented simply as a JSON file per jail per day.
+func JailCachePath(jailName string) string {
 	today := time.Now().Format("2006-01-02")
 	filename := fmt.Sprintf("%s-%s.json", jailName, today)
 	return path.Join(Config.Cache, filename)
