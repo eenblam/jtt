@@ -11,13 +11,13 @@ import (
 	"time"
 )
 
-var OPENAI_API_KEY string
+var OpenAIAPIKey string
 
 var Config = &AppConfig{}
 
 func init() {
-	OPENAI_API_KEY = os.Getenv("OPENAI_API_KEY")
-	if OPENAI_API_KEY == "" {
+	OpenAIAPIKey = os.Getenv("OPENAI_API_KEY")
+	if OpenAIAPIKey == "" {
 		log.Fatal("OPENAI_API_KEY must be set")
 	}
 

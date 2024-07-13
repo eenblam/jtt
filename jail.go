@@ -10,7 +10,7 @@ import (
 const DefaultDomainName = "omsweb.public-safety-cloud.com"
 
 type JailResponse struct {
-	// Yes, "Requred", this is in their API.
+	// Yes, "Requred", this is in their API. This key (like others) is typo'd.
 	CaptchaRequired bool `json:"captchaRequred"`
 	// They'll keep updating this
 	CaptchaKey string `json:"captchaKey"`
@@ -68,7 +68,7 @@ func (j *Jail) updateCaptcha() error {
 	captchaMatched := false
 	var captchaKey string
 	var err error
-	for i := 0; i < MAX_CAPTCHA_ATTEMPTS; i++ {
+	for i := 0; i < MaxCaptchaAttempts; i++ {
 		captchaKey, err = ProcessCaptcha(j)
 		if err != nil {
 			log.Printf("failed to solve captcha: %v", err)
@@ -78,7 +78,7 @@ func (j *Jail) updateCaptcha() error {
 		break
 	}
 	if !captchaMatched {
-		return fmt.Errorf("failed to match captcha after %d attempts", MAX_CAPTCHA_ATTEMPTS)
+		return fmt.Errorf("failed to match captcha after %d attempts", MaxCaptchaAttempts)
 	}
 	j.CaptchaKey = captchaKey
 	log.Println("Captcha matched!")

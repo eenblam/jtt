@@ -7,9 +7,7 @@ import (
 )
 
 const (
-	MAX_CAPTCHA_ATTEMPTS = 5
-	// Yes, "Requred". This key (like others) is typo'd. Using a variable here so it's easy to update if they fix the typo.
-	CAPTCHA_REQUIRED_KEY = "captchaRequred"
+	MaxCaptchaAttempts = 5
 )
 
 // Response from GET GET_CAPTCHA_CLIENT_URL and request to POST VALIDATE_CAPTCHA_URL
