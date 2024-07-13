@@ -116,8 +116,8 @@ type Inmate struct {
 
 func (i *Inmate) Update(j *Jail) error {
 	//"<OMS_URL>/jtclientweb/Offender/<JAIL_NAME>/<ARREST_NO>/offenderbucket/<OFFENDER_VIEW_KEY>",
-	inmateURL := fmt.Sprintf("https://%s/jtclientweb/Offender/%s/%s/offenderbucket/%d",
-		j.DomainName,
+	inmateURL := fmt.Sprintf("%s/jtclientweb/Offender/%s/%s/offenderbucket/%d",
+		j.BaseURL,
 		j.Name,
 		i.ArrestNo,
 		j.OffenderViewKey,

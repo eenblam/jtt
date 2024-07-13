@@ -35,11 +35,6 @@ func init() {
 
 func main() {
 	for _, jailConfig := range Config.Jails {
-		// Currently, most jails don't have a domain name in the config since I haven't looked them up yet.
-		if jailConfig.DomainName == "" {
-			jailConfig.DomainName = DefaultDomainName
-		}
-
 		// Right now we do nothing here. Later, the cached data can be used to update a remote database.
 		_, err := LoadJailCached(&jailConfig)
 		if err != nil {
@@ -56,7 +51,7 @@ func LoadJailCached(jailConfig *JailConfig) (*Jail, error) {
 	file, err := os.OpenFile(filename, os.O_RDWR|os.O_EXCL, 0644)
 	if errors.Is(err, os.ErrNotExist) { // File doesn't exist; create it
 		log.Printf("Cache miss for \"%s\"", filename)
-		jail, err := CrawlJail(jailConfig.DomainName, jailConfig.Slug)
+		jail, err := CrawlJail(jailConfig.BaseURL, jailConfig.Slug)
 		if err != nil {
 			return nil, err
 		}

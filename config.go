@@ -6,11 +6,13 @@ import (
 	"os"
 )
 
+const DefaultJailBaseURL = "https://omsweb.public-safety-cloud.com"
+
 type JailConfig struct {
 	// How we describe the jail
 	PrettyName string
-	// Domain for the jail. Usually "omsweb.public-safety-cloud.com", but not always!
-	DomainName string
+	// URL for the jail. Usually "https://omsweb.public-safety-cloud.com", but not always!
+	BaseURL string
 	// Used in API URLs
 	Slug string
 }
@@ -30,6 +32,13 @@ func LoadConfig(config *AppConfig, filename string) error {
 	err = json.Unmarshal(file, config)
 	if err != nil {
 		return fmt.Errorf("failed to unmarshal config file: %w", err)
+	}
+	for i := range config.Jails {
+		jailConfig := &config.Jails[i]
+		// Currently, most jails don't have a domain name in the config since I haven't looked them up yet.
+		if jailConfig.BaseURL == "" {
+			jailConfig.BaseURL = DefaultJailBaseURL
+		}
 	}
 	return nil
 }

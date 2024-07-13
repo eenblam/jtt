@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"log"
+	"net/url"
 )
 
 const (
@@ -36,12 +37,18 @@ func ProcessCaptcha(jail *Jail) (string, error) {
 	}
 
 	// Yes, "captcha" and "Captcha", as seen in the application traffic
-	getCaptchaClientURL := fmt.Sprintf("https://%s/jtclientweb/captcha/getnewcaptchaclient", jail.DomainName)
-	validateCaptchaURL := fmt.Sprintf("https://%s/jtclientweb/Captcha/validatecaptcha", jail.DomainName)
+	getCaptchaClientURL, err := url.JoinPath(jail.BaseURL, "jtclientweb/captcha/getnewcaptchaclient")
+	if err != nil {
+		return "", fmt.Errorf("failed to join URL: %w", err)
+	}
+	validateCaptchaURL, err := url.JoinPath(jail.BaseURL, "jtclientweb/Captcha/validatecaptcha")
+	if err != nil {
+		return "", fmt.Errorf("failed to join URL: %w", err)
+	}
 
 	// Get the captcha key
 	challenge := &CaptchaProtocol{}
-	err := GetJSON[CaptchaProtocol](getCaptchaClientURL, headers, challenge)
+	err = GetJSON[CaptchaProtocol](getCaptchaClientURL, headers, challenge)
 	if err != nil {
 		return "", fmt.Errorf("failed to GET captcha key: %w", err)
 	}
@@ -58,7 +65,7 @@ func ProcessCaptcha(jail *Jail) (string, error) {
 	results := &CaptchaAttemptResults{}
 	err = PostJSON[CaptchaProtocol, CaptchaAttemptResults](validateCaptchaURL, headers, challenge, results)
 	if err != nil {
-		return "", fmt.Errorf("failed captcha solution: %w", err)
+		return "", fmt.Errorf("failed to submit captcha solution: %w", err)
 	}
 	if !results.CaptchaMatched {
 		return "", errors.New("captcha did not match")
