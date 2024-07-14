@@ -16,7 +16,7 @@ Currently, I'm not publishing binaries for the project. You need:
     * I store this in `.env`: `export OPENAI_API_KEY='ASDF'`
     * If you can roll a better text extraction model that we can run locally, please let me know!
 
-You can configure which jails to monitor and where to store data in `config.json`.
+You can configure which jails to monitor and where to store data in `config.json`. For example, production data might be better stored in `/var/lib/jtt`, but the default is `./cache` for local development.
 
 To run: `. .env && go run .`
 
