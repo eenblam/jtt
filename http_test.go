@@ -94,13 +94,13 @@ func TestPostJSON(t *testing.T) {
 
 			err := PostJSON[Req, Res](ts.URL, nil, req, res)
 			if !c.WantErr && err != nil {
-				t.Errorf("unexpected error: %v", err)
+				t.Fatalf("unexpected error: %v", err)
 			}
 			if c.WantErr && err == nil {
-				t.Errorf("expected error, got nil")
+				t.Fatalf("expected error, got nil")
 			}
 			if res.A != wantRes.A || res.B != wantRes.B || res.C != wantRes.C {
-				t.Errorf("unexpected response. Got %v, want %v", res, wantRes)
+				t.Fatalf("unexpected response. Got %v, want %v", res, wantRes)
 			}
 		})
 	}
