@@ -103,7 +103,7 @@ func solveCaptchaOpenAI(inline_image string) (string, error) {
 	payload := getCaptchaPayload(inline_image)
 	completion := &CompletionResponse{}
 	headers := map[string][]string{
-		"Authorization": {"Bearer " + OpenAIAPIKey},
+		"Authorization": {"Bearer " + appEnv.OpenAIAPIKey},
 	}
 	err := PostJSON[RequestPayload, CompletionResponse](OpenAICompletionsURL, headers, payload, completion)
 	if err != nil {

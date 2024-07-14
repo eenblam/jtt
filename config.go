@@ -2,7 +2,9 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -24,7 +26,7 @@ type AppConfig struct {
 }
 
 // Marshal data from filename into provided config
-func LoadConfig(config *AppConfig, filename string) error {
+func (config *AppConfig) LoadConfig(filename string) error {
 	file, err := os.ReadFile(filename)
 	if err != nil {
 		return fmt.Errorf("failed to read config file: %w", err)
@@ -39,6 +41,33 @@ func LoadConfig(config *AppConfig, filename string) error {
 		if jailConfig.BaseURL == "" {
 			jailConfig.BaseURL = DefaultJailBaseURL
 		}
+	}
+	return nil
+}
+
+type AppEnv struct {
+	OpenAIAPIKey string // "JTT_OPENAI_API_KEY"
+	// Directory to cache jail data
+	ConfigPath string // "JTT_CONFIG_PATH"
+}
+
+// Load sets default values for empty optional environment variables
+func (a *AppEnv) Load() {
+	a.OpenAIAPIKey = os.Getenv("JTT_OPENAI_API_KEY")
+
+	a.ConfigPath = os.Getenv("JTT_CONFIG_PATH")
+	if a.ConfigPath == "" {
+		a.ConfigPath = "config.json"
+	} else {
+		log.Printf("Using config file from environment (JTT_CONFIG_PATH=\"%s\"", a.ConfigPath)
+	}
+}
+
+// Validate checks that required environment variables are set.
+// This is a separate step from Load, since it shouldn't be run on init() during tests.
+func (a *AppEnv) ValidateRequired() error {
+	if a.OpenAIAPIKey == "" {
+		return errors.New("JTT_OPENAI_API_KEY must be set")
 	}
 	return nil
 }
