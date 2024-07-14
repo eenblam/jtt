@@ -1,18 +1,28 @@
 # JTT - a JailTracker tracker
 
-## UPDATE: Archiving Indefinitely
+JTT is a project for monitoring carceral facilities who publish their roster via JailTracker.
 
-JailTracker has made a few changes since I threw this together in 2020 which JTT needs to be updated for:
-* They implemented a simple CAPTCHA. As of 2021, the captcha lacks audio accessibility features, which happen to be used in certain captcha bypass strategies. JailTracker could be pushed on the accessibility issue, given that this is data that they have an obligation to provide to the public. As of 2023, who knows, it's probably a lot easier to train an AI to bypass this now.
-* They've done away with the weird session-key-mid-URI shenanigans I documented below. As of 2021, standard session management should now work, but now JTT's URI's are broken.
-* There's possibly some other stuff that's changed with the API, but I haven't had time for a deep dive yet.
+In particular, JTT fetches data via the JailTracker API for the purpose of gathering data for the sake of police
+oversight. For example - how long are individuals held without charges? In what jails?
 
-Until I have time to pick this back up, I'm marking it as archived.
+JTT is expressly *not* intended for obtaining personal information about incarcerated individuals (who cannot consent,)
+obtaining mugshots, etc.
 
+## Usage
+Currently, I'm not publishing binaries for the project. You need:
+
+* A working Go installation
+* An OpenAI API key set in the `OPENAI_API_KEY` environment variable.
+    * I store this in `.env`: `export OPENAI_API_KEY='ASDF'`
+    * If you can roll a better text extraction model that we can run locally, please let me know!
+
+You can configure which jails to monitor and where to store data in `config.json`. For example, production data might be better stored in `/var/lib/jtt`, but the default is `./cache` for local development.
+
+To run: `. .env && go run .`
 
 ## About JTT
 
-JTT is a collaboration with another project:
+JTT was initially a collaboration with another project:
 @bfeldman89's [jail_scrapers](https://github.com/bfeldman89/jail_scrapers),
 which focuses on gathering data about Mississippi jails.
 Please see https://bfeldman89.com/projects/jails/ for information about this work.
@@ -23,94 +33,21 @@ this code has been separated from `jail_scrapers` for those interested in simila
 JTT uses the API of the JailTracker software suite
 in order to aggregate information about inmates for civic purposes.
 We're interested in answering questions about treatment of inmates, including but not limited to:
+
 * How long are inmates held pre-trial? Pre-arraignment?
 * How long are inmates being held without being charged at all, or when charges are dropped before trial?
 * Does this data vary along demographic or geographic lines?
 
-JTT is **not** for your mugshot website, and support for collecting photos will not be added.
+This project was on hiatus for a few years due to JailTracker implementing a captcha system, but that's currently not an issue.
+While it does bypass captchas, JTT does default to a VERY generous rate limit to avoid impacting response times for other users.
 
-## Usage
-See `examples/to_json.py` for a complete example of how to use JTT to get a JSON data set
-of however many jails you're interested in.
+When re-writing the project to account for the updated JailTracker API, I also ported the code from Python to Go.
+This is a matter of personal taste, but `jailtracker.py` does provide a proof-of-concept module for interacting
+with the current API.
 
-You can also see `examples/airtable_worker.py` for an example of how to use Airtable as a storage backend.
+## Known issues with available data
 
-### JailTracker URLs
-When you visit a JailTracker page, have a look at the address bar in your browser.
-The URL will look something like "https://omsweb.public-safety-cloud.com/jtclientweb/(S(3r01ougmulvelofaoxij53r4))/jailtracker/index/HANCOCK_COUNTY_MS".
-The `(S(3r01ougmulvelofaoxij53r4))` is JailTracker's funky way of handling session keys.
-If you try to reuse the above link, you'll probably get a new session key.
-
-However, to get a key without having one in the first place, you could have just gone to
-https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HANCOCK_COUNTY_MS.
-Note - this just omits the key component altogether!
-JailTracker will respond to your request with `302 Found`,
-and you'll be redirected to the address specified in the `Location` header of the response.
-This address contains your new session key.
-
-Fortunately, JTT handles that part for you.
-The simplest use case looks like this:
-```python
-import json
-
-hancock = jailtracker.Jail('https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HANCOCK_COUNTY_MS')
-data, err = hancock.process_inmates()
-if err is not None:
-    print(err)
-else:
-    print(json.dumps(data, ensure_ascii=False, indent=4))
-```
-
-### Finding your jail's URL
-Often, a sheriff's department will embed the JailTracker page in their website.
-For example, see http://www.hancockso.com/InmateRoster/hancock_inmatelist.html.
-(Sorry, no TLS.)
-
-Here's how to get the URL described in the previous section.
-
-Using the Firefox browser:
-* Right click inside the JailTracker frame
-* Choose "This Frame", then "Show Only This Frame"
-* You'll be redirected to the omsweb page. Copy the URL from your address bar.
-* Finally, reference the previous section to learn how to remove the unneeded session key from the URL.
-
-Chrome doesn't provide the same feature. Instead, you can:
-* Right click inside the JailTracker frame
-* Choose "Show frame source"
-* The source code for the JailTracker page will open in a new tab. The address bar of this new tab should contain the URL you want. Just strip off the `view-source:` bit at the beginning.
-* Finally, reference the previous section to learn how to remove the unneeded session key from the URL.
-
-## Data modeling
-To our knowledge, JailTracker doesn't publish its internal data model.
-
-In general, jails do tend to publish the following:
-* A **summary** for each inmate (returned as a list for `GetInmates`)
-* A detailed **inmate** report for a given arrest number (`GetInmate`)
-* A list of **cases** for a given arrest number (`GetCases`)
-* A list of **charges** for a given arrest number (`GetCharges`)
-    * For some reason, this is done via a POST request, not a GET. Go figure.
-
-Note: some jails are rather inconsistent with what they provide.
-For example, only a small percentage of inmates (or none at all)
-might have case or charge data available.
-
-### Relational data stores
-It's easy to use JTT to produce a JSON file of all the data you pull.
-See the included `examples/to_json.py`.
-
-However, if you want to use a relational data store,
-you need to know what tables and columns belong in your data model.
-To help with this, the script `getcolumns.py` is included.
-It reads jail data from a file called `results.json` - which you can produce using `example.py`,
-and it produces two files - `column_totals.json` and `column_results.json`.
-
-You can use the two resulting data sets to figure out the following:
-* What columns are needed for each data type (table)?
-    * `column_totals.json` is the easy way to read this
-* For a column of interest, which jails provide that information?
-    * See `column_results.json`
-
-### Known issues with available data
-Some jails (e.g. Harrison County, MS) require that you provide at least two characters in the "Last Name" field, otherwise no data will be provided.
-
-As previously mentioned, some jails don't consistently provide case or charge data.
+* Some jails (e.g. Harrison County, MS) require that you provide at least two characters in the "Last Name" field, otherwise no data will be provided.
+* Some jails don't consistently provide case or charge data.
+* Jails do not consistently use all the features of JailTracker. For example, there are some redundant date/time fields in the API, but often only one will be set.
+* Most data seems to be input by hand, and is often quite messy. I'll try to document this on the repo's wiki at some point.

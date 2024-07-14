@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "jtt"
+version = "0.1.0"
+description = "a JailTracker tracker"
+authors = ["eenblam <eenblam@riseup.net>"]
+license = "See license.txt"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytesseract = "^0.3.10"
+pillow = "^10.3.0"
+opencv-python = "^4.10.0.84"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.32.3"
+openai = "^1.35.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,33 @@
+{
+  "Jails": [
+    {
+      "Name": "DeSoto County",
+      "Slug": "DeSoto_County_Ms"
+    },
+    {
+      "Name": "Forrest County",
+      "Slug": "Forrest_County_MS"
+    },
+    {
+      "Name": "Hancock County",
+      "Slug": "HANCOCK_COUNTY_MS"
+    },
+    {
+      "Name": "Lamar County",
+      "Slug": "Lamar_County_Ms"
+    },
+    {
+      "Name": "Marion County",
+      "Slug": "Marion_County_Ms"
+    },
+    {
+      "Name": "Perry County",
+      "Slug": "Perry_County_MS"
+    },
+    {
+      "Name": "Yazoo County",
+      "Slug": "Yazoo_County_MS"
+    }
+  ],
+  "Cache": "./cache"
+}
