@@ -13,28 +13,23 @@ import (
 
 var OpenAIAPIKey string
 
-var Config = &AppConfig{}
+var appConfig = &AppConfig{}
+var appEnv = &AppEnv{}
 
 func init() {
-	OpenAIAPIKey = os.Getenv("OPENAI_API_KEY")
-	if OpenAIAPIKey == "" {
-		log.Fatal("OPENAI_API_KEY must be set")
-	}
-
-	configPath := os.Getenv("JTT_CONFIG_DIR")
-	if configPath == "" {
-		configPath = "config.json"
-	} else {
-		log.Printf("Using config file from environment (JTT_CONFIG_DIR=\"%s\"", configPath)
-	}
-	err := LoadConfig(Config, configPath)
+	appEnv.Load()
+	err := appConfig.LoadConfig(appEnv.ConfigPath)
 	if err != nil {
-		panic(err)
+		log.Fatalf("Failed to load config: %v", err)
 	}
 }
 
 func main() {
-	for _, jailConfig := range Config.Jails {
+	err := appEnv.ValidateRequired()
+	if err != nil {
+		log.Fatalf("Failed to validate environment: %v", err)
+	}
+	for _, jailConfig := range appConfig.Jails {
 		// Right now we do nothing here. Later, the cached data can be used to update a remote database.
 		_, err := LoadJailCached(&jailConfig)
 		if err != nil {
@@ -91,5 +86,5 @@ func SaveJail(jail *Jail) error {
 func JailCachePath(jailName string) string {
 	today := time.Now().Format("2006-01-02")
 	filename := fmt.Sprintf("%s-%s.json", jailName, today)
-	return path.Join(Config.Cache, filename)
+	return path.Join(appConfig.Cache, filename)
 }

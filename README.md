@@ -12,8 +12,8 @@ obtaining mugshots, etc.
 Currently, I'm not publishing binaries for the project. You need:
 
 * A working Go installation
-* An OpenAI API key set in the `OPENAI_API_KEY` environment variable.
-    * I store this in `.env`: `export OPENAI_API_KEY='ASDF'`
+* An OpenAI API key set in the `JTT_OPENAI_API_KEY` environment variable.
+    * I store this in `.env`: `export JTT_OPENAI_API_KEY='ASDF'`
     * If you can roll a better text extraction model that we can run locally, please let me know!
 
 You can configure which jails to monitor and where to store data in `config.json`. For example, production data might be better stored in `/var/lib/jtt`, but the default is `./cache` for local development.
