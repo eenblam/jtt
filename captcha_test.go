@@ -133,3 +133,15 @@ func TestProcessCaptcha(t *testing.T) {
 		})
 	}
 }
+
+func TestProcessCaptchaBadURL(t *testing.T) {
+	// Tedious coverage farming. Just confirming we fail on a bad URL.
+	j := &Jail{
+		BaseURL: "Bad URL with spaces",
+		Name:    "Doesn't matter",
+	}
+	_, err := ProcessCaptcha(j)
+	if err == nil {
+		t.Fatalf("expected error, got nil for bad URL")
+	}
+}

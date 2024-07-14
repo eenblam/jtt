@@ -37,6 +37,7 @@ func ProcessCaptcha(jail *Jail) (string, error) {
 	}
 
 	// Yes, "captcha" and "Captcha", as seen in the application traffic
+	// Tempting to refactor this elsewhere to separate concerns.
 	getCaptchaClientURL, err := url.JoinPath(jail.BaseURL, "jtclientweb/captcha/getnewcaptchaclient")
 	if err != nil {
 		return "", fmt.Errorf("failed to join URL: %w", err)
