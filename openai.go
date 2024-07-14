@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-const OpenAICompletionsURL = "https://api.openai.com/v1/chat/completions"
+var OpenAICompletionsURL = "https://api.openai.com/v1/chat/completions"
 
 // RequestPayload represents the entire request payload
 type RequestPayload struct {
