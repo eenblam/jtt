@@ -83,7 +83,9 @@ func ProcessCaptcha(jail *Jail) (string, error) {
 	return results.CaptchaKey, nil
 }
 
+// Check if captcha solution format matches expected format.
+// This lets us skip validating solutions we expect to fail.
+// So far, I've only seen 4-character captchas matching ^[a-zA-Z0-9]{4}$
 func solutionFormatIsValid(solution string) bool {
-	// So far, I've only seen 4-character captchas matching ^[a-zA-Z0-9]{4}$
 	return solutionPattern.MatchString(solution)
 }
