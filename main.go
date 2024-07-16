@@ -33,7 +33,8 @@ func main() {
 		// Right now we do nothing here. Later, the cached data can be used to update a remote database.
 		_, err := LoadJailCached(&jailConfig)
 		if err != nil {
-			panic(err)
+			log.Printf(`Skipped "%s". Failed to load: %s`, jailConfig.Slug, err)
+			continue
 		}
 	}
 }
