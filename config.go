@@ -11,17 +11,31 @@ import (
 const DefaultJailBaseURL = "https://omsweb.public-safety-cloud.com"
 
 type JailConfig struct {
-	// How we describe the jail
-	Title string
-	// URL for the jail. Usually "https://omsweb.public-safety-cloud.com", but not always!
-	BaseURL string
-	// Used in API URLs
+	// Used in API URLs; the jail's unique identifier in JailTracker
 	Slug string
-	// Web page to view roster; just here for logging
-	IndexURL string
 	// Whether or not we can currently pull data from the jail.
 	// Jail might require search, consistently times out or errors, etc
 	Usable bool
+
+	/* Optional fields */
+
+	// The Title field is currently ignored. This should gradually be broken out to Facility and State.
+	// It's a relic of the initial data scrape for list of jails.
+
+	// Name and state of facility
+	Facility string
+	State    string
+	// URL for the jail. Usually "https://omsweb.public-safety-cloud.com", but not always!
+	BaseURL string
+	// The main public website of the facility itself
+	FacilityURL string
+	// JailTracker web page for viewing the roster. Helpful for including in logs for convenient debugging.
+	IndexURL string
+	// Some jails allow advance search; JTT isn't using this right now, but it's helpful to know.
+	// For example, searching by release status
+	HasAdvancedSearch bool
+	// Notes on the entry; e.g. why it isn't usable
+	Notes string
 }
 
 type AppConfig struct {
