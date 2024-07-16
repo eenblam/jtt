@@ -12,11 +12,16 @@ const DefaultJailBaseURL = "https://omsweb.public-safety-cloud.com"
 
 type JailConfig struct {
 	// How we describe the jail
-	PrettyName string
+	Title string
 	// URL for the jail. Usually "https://omsweb.public-safety-cloud.com", but not always!
 	BaseURL string
 	// Used in API URLs
 	Slug string
+	// Web page to view roster; just here for logging
+	IndexURL string
+	// Whether or not we can currently pull data from the jail.
+	// Jail might require search, consistently times out or errors, etc
+	Usable bool
 }
 
 type AppConfig struct {
