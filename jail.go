@@ -9,6 +9,7 @@ import (
 
 type JailResponse struct {
 	// Yes, "Requred", this is in their API. This key (like others) is typo'd.
+	// (Also typo'd in the inmate request, but NOT in <FACILITY>/NameSearch)
 	CaptchaRequired bool `json:"captchaRequred"`
 	// They'll keep updating this
 	CaptchaKey string `json:"captchaKey"`
@@ -16,6 +17,10 @@ type JailResponse struct {
 	Offenders []Inmate `json:"offenders"`
 	// This is updated with every request
 	OffenderViewKey int `json:"offenderViewKey"`
+	// Empty string on success, non-empty on error.
+	// JailTracker sitll returns a 200 for what should be an internal server error or bad gateway,
+	// but this will at least be set.
+	ErrorMessage string `json:"errorMessage"`
 }
 
 type Jail struct {
@@ -52,6 +57,9 @@ func NewJail(baseURL, name string) (*Jail, error) {
 	err := PostJSON[CaptchaProtocol, JailResponse](j.getJailAPIURL(), nil, payload, jailResponse)
 	if err != nil {
 		return nil, fmt.Errorf("failed to request initial jail data: %w", err)
+	}
+	if jailResponse.ErrorMessage != "" {
+		return nil, fmt.Errorf(`non-empty error message for jail "%s": "%s"`, name, jailResponse.ErrorMessage)
 	}
 	if jailResponse.CaptchaRequired {
 		return nil, fmt.Errorf("captcha required for jail. Response: %v", jailResponse)

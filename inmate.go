@@ -74,8 +74,11 @@ type InmateResponse struct {
 	CaptchaRequired bool   `json:"captchaRequred"` // sic, yes "Requred"
 	OffenderViewKey int    `json:"offenderViewKey"`
 	CaptchaKey      string `json:"captchaKey"`
-	ErrorMessage    string `json:"errorMessage"`
-	Success         bool   `json:"succes"` // sic, yes "succes"
+	// Here, this is null on success (empty string for JailResponse) and set on error.
+	// Used in place of HTTP status codes; so far I only see 200s.
+	// (Requesting a non-existent inmate is actually a 200, succes=true, no error, but captchaRequred=true)
+	ErrorMessage string `json:"errorMessage"`
+	Success      bool   `json:"succes"` // sic, yes "succes"
 	// Related to the actual inmate
 	Cases         []Case         `json:"cases"`
 	Charges       []Charge       `json:"charges"`
@@ -137,6 +140,9 @@ func (i *Inmate) Update(j *Jail) error {
 		err := PostJSON[CaptchaProtocol, InmateResponse](inmateURL, nil, payload, inmateResponse)
 		if err != nil {
 			return fmt.Errorf("failed to update inmate: %w", err)
+		}
+		if inmateResponse.ErrorMessage != "" {
+			return fmt.Errorf(`non-empty error message for inmate "%s": "%s"`, i.ArrestNo, inmateResponse.ErrorMessage)
 		}
 		if !inmateResponse.CaptchaRequired { // Success!
 			break
