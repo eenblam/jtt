@@ -128,7 +128,6 @@ func (j Jail) getJailAPIURL() string {
 }
 
 func CrawlJail(baseURL, name string) (*Jail, error) {
-	log.Printf("Crawling jail: %s", name)
 	j, err := NewJail(baseURL, name)
 	if err != nil {
 		return nil, fmt.Errorf("failed to initialize jail: %w", err)
