@@ -5,11 +5,14 @@ import (
 	"fmt"
 	"log"
 	"net/url"
+	"regexp"
 )
 
 const (
 	MaxCaptchaAttempts = 5
 )
+
+var solutionPattern = regexp.MustCompile(`^[a-zA-Z0-9]{4}$`)
 
 // Response from GET GET_CAPTCHA_CLIENT_URL and request to POST VALIDATE_CAPTCHA_URL
 // Format: {"captchaKey":"BASE64","captchaImage":"data:image/gif;base64,...BASE64...","userCode":null}
@@ -61,6 +64,9 @@ func ProcessCaptcha(jail *Jail) (string, error) {
 	}
 	challenge.UserCode = solution
 	log.Printf("Received solution: %s", solution)
+	if !solutionFormatIsValid(solution) {
+		return "", fmt.Errorf(`solution "%s" seems invalid; skipping`, solution)
+	}
 
 	// Submit response
 	results := &CaptchaAttemptResults{}
@@ -75,4 +81,9 @@ func ProcessCaptcha(jail *Jail) (string, error) {
 	log.Printf("Solution \"%s\" matched key \"%s\"", solution, results.CaptchaKey)
 
 	return results.CaptchaKey, nil
+}
+
+func solutionFormatIsValid(solution string) bool {
+	// So far, I've only seen 4-character captchas matching ^[a-zA-Z0-9]{4}$
+	return solutionPattern.MatchString(solution)
 }

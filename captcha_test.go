@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"io"
 	"net/http"
 	"net/http/httptest"
@@ -28,9 +29,10 @@ func TestProcessCaptcha(t *testing.T) {
 	captchaKey := "TEST_KEY"
 	getCaptchaResponse := []byte(`{"captchaKey":"TEST_KEY","captchaImage":"TEST_IMAGE","userCode":null}`)
 	// Solution server expects
-	captchaSolution := "TEST_SOLUTION"
+	captchaSolution := "a1B2"
 	// Solution returned by solver
-	solverResponse := []byte(`{"choices":[{"message":{"content":"TEST_SOLUTION"}}]}`)
+	solverResponseTemplate := `{"choices":[{"message":{"content":"%s"}}]}`
+	solverResponse := []byte(fmt.Sprintf(solverResponseTemplate, captchaSolution))
 	// Simulate validation success
 	var validateCaptchaSuccess bool
 
@@ -91,18 +93,35 @@ func TestProcessCaptcha(t *testing.T) {
 
 	cases := []struct {
 		Label string
+		// Solution the solver provides
+		Solution string
+		// What the captcha server expects
+		ExpectedSolution string
 		// Mock responses
 		ValidateCaptchaSuccess bool
 		WantErr                bool
 	}{
 		{
 			Label:                  "test happy path",
+			Solution:               "a1B2",
+			ExpectedSolution:       "a1B2",
 			ValidateCaptchaSuccess: true,
 			WantErr:                false,
 		},
 		{
-			Label:                  "test captcha failure",
+			Label:    "test captcha validation failure",
+			Solution: "a1B2",
+			// Keeping these the same; ValidateCaptchaSuccess is what actually determines server response
+			ExpectedSolution:       "a1B2",
 			ValidateCaptchaSuccess: false,
+			WantErr:                true,
+		},
+		{
+			Label:            "error on malformed solution",
+			Solution:         "this breaks the regex",
+			ExpectedSolution: "this breaks the regex",
+			// Ensure that we get an error, even though captcha would be validated
+			ValidateCaptchaSuccess: true,
 			WantErr:                true,
 		},
 		// Can extend cases to test other failure modes:
@@ -116,11 +135,14 @@ func TestProcessCaptcha(t *testing.T) {
 		t.Run(c.Label, func(t *testing.T) {
 			// Set up the mock responses
 			validateCaptchaSuccess = c.ValidateCaptchaSuccess
+			solverResponse = []byte(fmt.Sprintf(solverResponseTemplate, c.Solution))
+			// Reset the expected solution
+			captchaSolution = c.ExpectedSolution
 
 			got, err := ProcessCaptcha(jail)
 			if c.WantErr {
 				if err == nil {
-					t.Fatalf("expected error, got nil")
+					t.Fatal("expected error, got nil")
 				}
 				return
 			}
@@ -142,6 +164,23 @@ func TestProcessCaptchaBadURL(t *testing.T) {
 	}
 	_, err := ProcessCaptcha(j)
 	if err == nil {
-		t.Fatalf("expected error, got nil for bad URL")
+		t.Fatal("expected error, got nil for bad URL")
+	}
+}
+
+func TestSolutionFormatIsValid(t *testing.T) {
+	if !solutionFormatIsValid("a1B2") { // Happy path
+		t.Fatal("expected solution format to be valid")
+	}
+	invalidCases := []string{
+		"123",   // Too short
+		"12345", // Too long
+		" 123",  // White space
+		"BVλd",  // Non-ASCII
+	}
+	for _, c := range invalidCases {
+		if solutionFormatIsValid(c) {
+			t.Fatalf(`expected solution "%s" to have invalid format`, c)
+		}
 	}
 }
