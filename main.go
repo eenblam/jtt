@@ -30,10 +30,15 @@ func main() {
 		log.Fatalf("Failed to validate environment: %v", err)
 	}
 	for _, jailConfig := range appConfig.Jails {
+		if !jailConfig.Usable {
+			log.Printf(`Skipped "%s". Not usable.`, jailConfig.Slug)
+			continue
+		}
 		// Right now we do nothing here. Later, the cached data can be used to update a remote database.
 		_, err := LoadJailCached(&jailConfig)
 		if err != nil {
-			panic(err)
+			log.Printf(`Skipped "%s". Failed to load: %s`, jailConfig.Slug, err)
+			continue
 		}
 	}
 }
@@ -46,6 +51,7 @@ func LoadJailCached(jailConfig *JailConfig) (*Jail, error) {
 	file, err := os.OpenFile(filename, os.O_RDWR|os.O_EXCL, 0644)
 	if errors.Is(err, os.ErrNotExist) { // File doesn't exist; create it
 		log.Printf("Cache miss for \"%s\"", filename)
+		log.Printf(`Crawling jail "%s". See %s`, jailConfig.Slug, jailConfig.IndexURL)
 		jail, err := CrawlJail(jailConfig.BaseURL, jailConfig.Slug)
 		if err != nil {
 			return nil, err
