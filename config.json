@@ -8,10 +8,11 @@
       "Slug": "Marion_County_Ms",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Marion_County_Ms",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Marion_County_Ms",
-      "Facility URL": "",
-      "Notes": "Manual addition, not from Google"
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Marion_County_Ms",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Marion_County_Ms",
+      "FacilityURL": "",
+      "Notes": "Manual addition, not from Google",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Perry County MS",
@@ -20,10 +21,11 @@
       "Slug": "Perry_County_Ms",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Perry_County_Ms",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Perry_County_Ms",
-      "Facility URL": "",
-      "Notes": "Manual addition, not from Google"
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Perry_County_Ms",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Perry_County_Ms",
+      "FacilityURL": "",
+      "Notes": "Manual addition, not from Google",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Oklahoma County OK",
@@ -32,10 +34,11 @@
       "Slug": "Oklahoma_County_OK",
       "Usable": false,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Oklahoma_County_OK",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Oklahoma_County_OK",
-      "Facility URL": "",
-      "Notes": "Requires search"
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Oklahoma_County_OK",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Oklahoma_County_OK",
+      "FacilityURL": "",
+      "Notes": "Requires search",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Desoto County Jail, MS",
@@ -44,10 +47,11 @@
       "Slug": "DeSoto_County_Ms",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/DeSoto_County_Ms",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/DeSoto_County_Ms",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/DeSoto_County_Ms",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/DeSoto_County_Ms",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "RSW Regional Jail VA",
@@ -56,10 +60,11 @@
       "Slug": "RSW_Regional_VA",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/RSW_Regional_VA",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/RSW_Regional_VA",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/RSW_Regional_VA",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/RSW_Regional_VA",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "St Joseph County IN",
@@ -68,10 +73,11 @@
       "Slug": "StJoseph_County_IN",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/StJoseph_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/StJoseph_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/StJoseph_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/StJoseph_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Greenwood Co SC",
@@ -80,10 +86,11 @@
       "Slug": "Greenwood_County_SC",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Greenwood_County_SC",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Greenwood_County_SC",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Greenwood_County_SC",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Greenwood_County_SC",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Isabella Co MI",
@@ -92,10 +99,11 @@
       "Slug": "Isabella_County_MI",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Isabella_County_MI",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Isabella_County_MI",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Isabella_County_MI",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Isabella_County_MI",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Vigo County IN",
@@ -104,10 +112,11 @@
       "Slug": "Vigo_County_IN",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Vigo_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Vigo_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Vigo_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Vigo_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Kenton County Jail, KY",
@@ -116,10 +125,11 @@
       "Slug": "Kenton_County_KY",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Kenton_County_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Kenton_County_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Kenton_County_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Kenton_County_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Greene County MO",
@@ -128,10 +138,11 @@
       "Slug": "Greene_County_MO",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Greene_County_MO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Greene_County_MO",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Greene_County_MO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Greene_County_MO",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Burleigh County Detention Center, ND",
@@ -140,10 +151,11 @@
       "Slug": "Burleigh_County_ND",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Burleigh_County_ND",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Burleigh_County_ND",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Burleigh_County_ND",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Burleigh_County_ND",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Pamunkey JMS, VA",
@@ -152,10 +164,11 @@
       "Slug": "Pamunkey_JMS_VA",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Pamunkey_JMS_VA",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Pamunkey_JMS_VA",
-      "Facility URL": "https://www.hanovercounty.gov/232/Pamunkey-Regional-Jail",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Pamunkey_JMS_VA",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Pamunkey_JMS_VA",
+      "FacilityURL": "https://www.hanovercounty.gov/232/Pamunkey-Regional-Jail",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Grant County Jail, KY",
@@ -164,10 +177,11 @@
       "Slug": "Grant_County_Ky",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Grant_County_Ky",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Grant_County_Ky",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Grant_County_Ky",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Grant_County_Ky",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Ohio County Detention Center, KY",
@@ -176,10 +190,11 @@
       "Slug": "OHIO_COUNTY_KY",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/OHIO_COUNTY_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/OHIO_COUNTY_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/OHIO_COUNTY_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/OHIO_COUNTY_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Logan County Detention Center, KY",
@@ -188,10 +203,11 @@
       "Slug": "LOGAN_COUNTY_KY",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/LOGAN_COUNTY_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/LOGAN_COUNTY_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/LOGAN_COUNTY_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/LOGAN_COUNTY_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Leslie County Detention Center, KY",
@@ -200,10 +216,11 @@
       "Slug": "LESLIE_COUNTY_KY",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/LESLIE_COUNTY_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/LESLIE_COUNTY_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/LESLIE_COUNTY_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/LESLIE_COUNTY_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Oldham County Jail, KY",
@@ -212,10 +229,11 @@
       "Slug": "Oldham_County_Ky",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Oldham_County_Ky",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Oldham_County_Ky",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Oldham_County_Ky",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Oldham_County_Ky",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Knox County Detention Center, KY",
@@ -224,10 +242,11 @@
       "Slug": "KNOX_COUNTY_KY",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/KNOX_COUNTY_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/KNOX_COUNTY_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/KNOX_COUNTY_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/KNOX_COUNTY_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Henderson Co. Jail, KY",
@@ -236,10 +255,11 @@
       "Slug": "HENDERSON_COUNTY_KY",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HENDERSON_COUNTY_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/HENDERSON_COUNTY_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HENDERSON_COUNTY_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/HENDERSON_COUNTY_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Clark Co Det Center, KY",
@@ -248,10 +268,11 @@
       "Slug": "Clark_County_Ky",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Clark_County_Ky",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Clark_County_Ky",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Clark_County_Ky",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Clark_County_Ky",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Daviess County Jail, KY",
@@ -260,10 +281,11 @@
       "Slug": "DAVIES_COUNTY_KY",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/DAVIES_COUNTY_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/DAVIES_COUNTY_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/DAVIES_COUNTY_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/DAVIES_COUNTY_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Scott County Detention Center, KY",
@@ -272,10 +294,11 @@
       "Slug": "Scott_County_KY",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Scott_County_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Scott_County_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Scott_County_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Scott_County_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Virginia Peninsula Regional Jail VA",
@@ -284,10 +307,11 @@
       "Slug": "Virginia_PenRJ_VA",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Virginia_PenRJ_VA",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Virginia_PenRJ_VA",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Virginia_PenRJ_VA",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Virginia_PenRJ_VA",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Warren County Detention Center, KY",
@@ -296,10 +320,11 @@
       "Slug": "Warren_County_KY",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Warren_County_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Warren_County_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Warren_County_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Warren_County_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Pulaski County Detention Center, KY",
@@ -308,10 +333,11 @@
       "Slug": "PULASKI_COUNTY_KY",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/PULASKI_COUNTY_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/PULASKI_COUNTY_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/PULASKI_COUNTY_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/PULASKI_COUNTY_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Campbell County Jail KY",
@@ -320,10 +346,11 @@
       "Slug": "Campbell_County_KY",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Campbell_County_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Campbell_County_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Campbell_County_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Campbell_County_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Rowan County Detention Center, KY",
@@ -332,10 +359,11 @@
       "Slug": "Rowan_County_KY",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Rowan_County_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Rowan_County_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Rowan_County_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Rowan_County_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Boone County IN",
@@ -344,10 +372,11 @@
       "Slug": "Boone_County_IN",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Boone_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Boone_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Boone_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Boone_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Tippecanoe Co IN",
@@ -356,10 +385,11 @@
       "Slug": "Tippecanoe_County_IN",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Tippecanoe_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Tippecanoe_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Tippecanoe_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Tippecanoe_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Laporte County Jail, IN",
@@ -368,10 +398,11 @@
       "Slug": "Laporte_County_IN",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Laporte_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Laporte_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Laporte_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Laporte_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Grant County NM",
@@ -380,10 +411,11 @@
       "Slug": "Grant_County_NM",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Grant_County_NM",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Grant_County_NM",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Grant_County_NM",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Grant_County_NM",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Western Tidewater VA",
@@ -392,10 +424,11 @@
       "Slug": "Western_Tidewater_VA",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Western_Tidewater_VA",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Western_Tidewater_VA",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Western_Tidewater_VA",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Western_Tidewater_VA",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Starke County IN",
@@ -404,10 +437,11 @@
       "Slug": "Starke_County_IN",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Starke_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Starke_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Starke_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Starke_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Chester Co Detention Center, SC",
@@ -416,10 +450,11 @@
       "Slug": "Chester_County_SC",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Chester_County_SC",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Chester_County_SC",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Chester_County_SC",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Chester_County_SC",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Greene County PA",
@@ -428,10 +463,11 @@
       "Slug": "Greene_County_PA",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Greene_County_PA",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Greene_County_PA",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Greene_County_PA",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Greene_County_PA",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Saginaw Co MI",
@@ -440,10 +476,11 @@
       "Slug": "Saginaw_County_MI",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Saginaw_County_MI",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Saginaw_County_MI",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Saginaw_County_MI",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Saginaw_County_MI",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Hancock County IN",
@@ -452,10 +489,11 @@
       "Slug": "Hancock_County_IN",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Hancock_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Hancock_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Hancock_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Hancock_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Socorro County NM",
@@ -464,10 +502,11 @@
       "Slug": "Socorro_County_NM",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Socorro_County_NM",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Socorro_County_NM",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Socorro_County_NM",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Socorro_County_NM",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Southwest VA",
@@ -476,10 +515,11 @@
       "Slug": "Southwest_VA",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Southwest_VA",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Southwest_VA",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Southwest_VA",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Southwest_VA",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Ottawa County OH",
@@ -488,10 +528,11 @@
       "Slug": "Ottawa_County_OH",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Ottawa_County_OH",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Ottawa_County_OH",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Ottawa_County_OH",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Ottawa_County_OH",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Pickens County GA",
@@ -500,10 +541,11 @@
       "Slug": "Pickens_County_GA",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Pickens_County_GA",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Pickens_County_GA",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Pickens_County_GA",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Pickens_County_GA",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Marion County MS",
@@ -512,10 +554,11 @@
       "Slug": "MARION_COUNTY_MS",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/MARION_COUNTY_MS",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/MARION_COUNTY_MS",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/MARION_COUNTY_MS",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/MARION_COUNTY_MS",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Alpena Co MI",
@@ -524,10 +567,11 @@
       "Slug": "Alpena_County_MI",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Alpena_County_MI",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Alpena_County_MI",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Alpena_County_MI",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Alpena_County_MI",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Hendricks County IN",
@@ -536,10 +580,11 @@
       "Slug": "Hendricks_County_IN",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Hendricks_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Hendricks_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Hendricks_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Hendricks_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Lamar Co Correct Facility, MS",
@@ -548,10 +593,11 @@
       "Slug": "Lamar_County_MS",
       "Usable": false,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Lamar_County_MS",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Lamar_County_MS",
-      "Facility URL": "",
-      "Notes": "Busted 2024-07-16. Error 789456123: Data Store Unreachable. Also note that Lamar_County_Ms goes to the same location."
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Lamar_County_MS",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Lamar_County_MS",
+      "FacilityURL": "",
+      "Notes": "Busted 2024-07-16. Error 789456123: Data Store Unreachable. Also note that Lamar_County_Ms goes to the same location.",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Hillsdale MI",
@@ -560,10 +606,11 @@
       "Slug": "Hillsdale_MI",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Hillsdale_MI",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Hillsdale_MI",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Hillsdale_MI",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Hillsdale_MI",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Lincoln County MO",
@@ -572,10 +619,11 @@
       "Slug": "Lincoln_County_MO",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Lincoln_County_MO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Lincoln_County_MO",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Lincoln_County_MO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Lincoln_County_MO",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Harrison County Jail, MS",
@@ -584,22 +632,24 @@
       "Slug": "HARRISON_COUNTY_JAIL_MS",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HARRISON_COUNTY_JAIL_MS",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/HARRISON_COUNTY_JAIL_MS",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HARRISON_COUNTY_JAIL_MS",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/HARRISON_COUNTY_JAIL_MS",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Blue Ridge Regional Jail Lynchburg, VA",
-      "Facility": "",
+      "Facility": "Blue Ridge Regional Jail (Lynchburg)",
       "State": "VA",
       "Slug": "Blue_Ridge_Regional_VA_Lynchburg",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Blue_Ridge_Regional_VA_Lynchburg",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Blue_Ridge_Regional_VA_Lynchburg",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Blue_Ridge_Regional_VA_Lynchburg",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Blue_Ridge_Regional_VA_Lynchburg",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Dawson Co Detention Center, GA",
@@ -608,10 +658,11 @@
       "Slug": "Dawson_County_GA",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Dawson_County_GA",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Dawson_County_GA",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Dawson_County_GA",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Dawson_County_GA",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Marion County KY",
@@ -620,10 +671,11 @@
       "Slug": "Marion_County_KY",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Marion_County_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Marion_County_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Marion_County_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Marion_County_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Vermont DOC",
@@ -632,10 +684,11 @@
       "Slug": "Vermont",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Vermont",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Vermont",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Vermont",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Vermont",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Levy County FL",
@@ -644,10 +697,11 @@
       "Slug": "LEVY_COUNTY_FL",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/LEVY_COUNTY_FL",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/LEVY_COUNTY_FL",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/LEVY_COUNTY_FL",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/LEVY_COUNTY_FL",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Scott County MO",
@@ -656,10 +710,11 @@
       "Slug": "Scott_County_MO",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Scott_County_MO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Scott_County_MO",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Scott_County_MO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Scott_County_MO",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "McPherson County KS",
@@ -668,10 +723,11 @@
       "Slug": "McPherson_County_KS",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/McPherson_County_KS",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/McPherson_County_KS",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/McPherson_County_KS",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/McPherson_County_KS",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Midland County Sheriffs Office, MI",
@@ -680,10 +736,11 @@
       "Slug": "Midland_County_MI",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Midland_County_MI",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Midland_County_MI",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Midland_County_MI",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Midland_County_MI",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Archuleta Co CO",
@@ -692,10 +749,11 @@
       "Slug": "Archuleta_County_CO",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Archuleta_County_CO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Archuleta_County_CO",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Archuleta_County_CO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Archuleta_County_CO",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Sullivan County IN",
@@ -704,10 +762,11 @@
       "Slug": "Sullivan_County_IN",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Sullivan_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Sullivan_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Sullivan_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Sullivan_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Gratiot Co MI",
@@ -716,10 +775,11 @@
       "Slug": "Gratiot_County_MI",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Gratiot_County_MI",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Gratiot_County_MI",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Gratiot_County_MI",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Gratiot_County_MI",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Clay County IN",
@@ -728,10 +788,11 @@
       "Slug": "Clay_County_IN",
       "Usable": false,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Clay_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Clay_County_IN",
-      "Facility URL": "",
-      "Notes": "2024-07-10: Error 789456123: Data Store Unreachable"
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Clay_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Clay_County_IN",
+      "FacilityURL": "",
+      "Notes": "2024-07-10: Error 789456123: Data Store Unreachable",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Knox County Jail, IN",
@@ -740,10 +801,11 @@
       "Slug": "Knox_County_IN",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Knox_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Knox_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Knox_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Knox_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Kleberg County TX",
@@ -752,22 +814,11 @@
       "Slug": "Kleberg_County_Tx",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Kleberg_County_Tx",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Kleberg_County_Tx",
-      "Facility URL": "",
-      "Notes": ""
-    },
-    {
-      "Title": "Desoto County Jail, MS",
-      "Facility": "",
-      "State": "MS",
-      "Slug": "",
-      "Usable": false,
-      "Has multiple search types": "",
-      "Corrected URL": "",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/(S(tvglmtxtw4iwqas5hpeoc1qn))/jailtracker/index/67/?mobile=0",
-      "Facility URL": "",
-      "Notes": "Duplicate; bad link"
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Kleberg_County_Tx",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Kleberg_County_Tx",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Washington County Jail, IN",
@@ -776,10 +827,11 @@
       "Slug": "Washington_County_IN",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Washington_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Washington_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Washington_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Washington_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Middle River Regional Jail VA",
@@ -788,10 +840,11 @@
       "Slug": "Middle_River_Regional_Jail_VA",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Middle_River_Regional_Jail_VA",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Middle_River_Regional_Jail_VA",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Middle_River_Regional_Jail_VA",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Middle_River_Regional_Jail_VA",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Marshall County Sheriff Office, TN",
@@ -800,10 +853,11 @@
       "Slug": "MARSHALL_COUNTY_TN",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/MARSHALL_COUNTY_TN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/MARSHALL_COUNTY_TN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/MARSHALL_COUNTY_TN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/MARSHALL_COUNTY_TN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Platte County Sheriff, MO",
@@ -812,10 +866,11 @@
       "Slug": "Platte_County_MO",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Platte_County_MO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Platte_County_MO",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Platte_County_MO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Platte_County_MO",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Pulaski County Jail, IN",
@@ -824,10 +879,11 @@
       "Slug": "Pulaski_County_IN",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Pulaski_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Pulaski_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Pulaski_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Pulaski_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Dupage Co Sheriff",
@@ -836,10 +892,11 @@
       "Slug": "Dupage_County_IL",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Dupage_County_IL",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Dupage_County_IL",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Dupage_County_IL",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Dupage_County_IL",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Dorchester County MD",
@@ -848,10 +905,11 @@
       "Slug": "Dorchester_County_MD",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Dorchester_County_MD",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Dorchester_County_MD",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Dorchester_County_MD",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Dorchester_County_MD",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Laurel County Jail, KY",
@@ -860,10 +918,11 @@
       "Slug": "Laurel_County_Ky",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Laurel_County_Ky",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Laurel_County_Ky",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Laurel_County_Ky",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Laurel_County_Ky",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Shelby County Jail, IN",
@@ -872,10 +931,11 @@
       "Slug": "Shelby_County_IN",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Shelby_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Shelby_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Shelby_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Shelby_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Howard County IN",
@@ -884,10 +944,11 @@
       "Slug": "howard_County_IN",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/howard_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/howard_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/howard_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/howard_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Tipton County IN",
@@ -896,10 +957,11 @@
       "Slug": "Tipton_County_IN",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Tipton_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Tipton_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Tipton_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Tipton_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Daviess Dekalb MO",
@@ -908,10 +970,11 @@
       "Slug": "Daviess_DeKalb_MO",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Daviess_DeKalb_MO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Daviess_DeKalb_MO",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Daviess_DeKalb_MO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Daviess_DeKalb_MO",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Putnam Co Sheriffs Dept, IN",
@@ -920,10 +983,11 @@
       "Slug": "Putnam_County_In",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Putnam_County_In",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Putnam_County_In",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Putnam_County_In",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Putnam_County_In",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Christian County MO",
@@ -932,10 +996,11 @@
       "Slug": "Christian_County_MO",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Christian_County_MO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Christian_County_MO",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Christian_County_MO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Christian_County_MO",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Lincoln County MO",
@@ -944,10 +1009,11 @@
       "Slug": "Lincoln_County_MO",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Lincoln_County_MO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/(S(dllfyjvzkee51ulv3q3zevha))/jailtracker/index/132/?mobile=0",
-      "Facility URL": "",
-      "Notes": "Had to search for correct URL"
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Lincoln_County_MO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/(S(dllfyjvzkee51ulv3q3zevha))/jailtracker/index/132/?mobile=0",
+      "FacilityURL": "",
+      "Notes": "Had to search for correct URL",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Hancock Co Sheriff, MS",
@@ -956,46 +1022,50 @@
       "Slug": "HANCOCK_COUNTY_MS",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HANCOCK_COUNTY_MS",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/HANCOCK_COUNTY_MS",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HANCOCK_COUNTY_MS",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/HANCOCK_COUNTY_MS",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Whitley Co Sheriffs Dept, IN",
-      "Facility": "",
+      "Facility": "Whitley County SD",
       "State": "IN",
       "Slug": "Whitley_County_In",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Whitley_County_In",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Whitley_County_In",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Whitley_County_In",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Whitley_County_In",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Fulton County Jail, KY",
-      "Facility": "",
+      "Facility": "Fulton County Jail",
       "State": "KY",
       "Slug": "FULTON_COUNTY_REGIONAL_KY",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/FULTON_COUNTY_REGIONAL_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/FULTON_COUNTY_REGIONAL_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/FULTON_COUNTY_REGIONAL_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/FULTON_COUNTY_REGIONAL_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Northern Neck Regional Jail VA",
-      "Facility": "",
+      "Facility": "Northern Neck Regional Jail",
       "State": "VA",
       "Slug": "Northern_Neck_VA",
       "Usable": false,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Northern_Neck_VA",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Northern_Neck_VA",
-      "Facility URL": "",
-      "Notes": "Search required"
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Northern_Neck_VA",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Northern_Neck_VA",
+      "FacilityURL": "",
+      "Notes": "Search required",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Harlan County Detention Center, KY",
@@ -1004,10 +1074,11 @@
       "Slug": "HARLAN_COUNTY_KY",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HARLAN_COUNTY_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/HARLAN_COUNTY_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HARLAN_COUNTY_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/HARLAN_COUNTY_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Giles County Jail, TN",
@@ -1016,10 +1087,11 @@
       "Slug": "Giles_County_Tn",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Giles_County_Tn",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Giles_County_Tn",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Giles_County_Tn",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Giles_County_Tn",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Yazoo Co RCF, MS",
@@ -1028,10 +1100,11 @@
       "Slug": "Yazoo_County_MS",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Yazoo_County_MS",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Yazoo_County_MS",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Yazoo_County_MS",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Yazoo_County_MS",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Nelson County Jail, KY",
@@ -1040,10 +1113,11 @@
       "Slug": "Nelson_County_Ky",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Nelson_County_Ky",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Nelson_County_Ky",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Nelson_County_Ky",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Nelson_County_Ky",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Greenwood Co SC",
@@ -1052,10 +1126,11 @@
       "Slug": "Greenwood_County_SC",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Greenwood_County_SC",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/(S(cnp0inohn1erjjwzxetpuqx4))/jailtracker/index/296/?mobile=0",
-      "Facility URL": "",
-      "Notes": "Had to search for correct URL"
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Greenwood_County_SC",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/(S(cnp0inohn1erjjwzxetpuqx4))/jailtracker/index/296/?mobile=0",
+      "FacilityURL": "",
+      "Notes": "Had to search for correct URL",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Saline County MO",
@@ -1064,10 +1139,11 @@
       "Slug": "Saline_County_MO",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Saline_County_MO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Saline_County_MO",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Saline_County_MO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Saline_County_MO",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Marion County KS",
@@ -1076,10 +1152,11 @@
       "Slug": "Marion_County_KS",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Marion_County_KS",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Marion_County_KS",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Marion_County_KS",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Marion_County_KS",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Cedar County MO",
@@ -1088,10 +1165,11 @@
       "Slug": "Cedar_County_MO",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Cedar_County_MO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Cedar_County_MO",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Cedar_County_MO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Cedar_County_MO",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Jessamine Co. Jail, KY",
@@ -1100,10 +1178,11 @@
       "Slug": "Jessamine_County_Ky",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Jessamine_County_Ky",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Jessamine_County_Ky",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Jessamine_County_Ky",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Jessamine_County_Ky",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Henry County MO",
@@ -1112,10 +1191,11 @@
       "Slug": "Henry_County_MO",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Henry_County_MO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Henry_County_MO",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Henry_County_MO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Henry_County_MO",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Bell County Detention Center, KY",
@@ -1124,10 +1204,11 @@
       "Slug": "Bell_County_KY",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Bell_County_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Bell_County_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Bell_County_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Bell_County_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Invalid Facility",
@@ -1136,10 +1217,11 @@
       "Slug": "MACOMB_CO_MI",
       "Usable": false,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.secure-gps.com/jtclientweb/jailtracker/index/MACOMB_CO_MI",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/MACOMB_CO_MI",
-      "Facility URL": "",
-      "Notes": "Search required"
+      "IndexURL": "https://omsweb.secure-gps.com/jtclientweb/jailtracker/index/MACOMB_CO_MI",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/MACOMB_CO_MI",
+      "FacilityURL": "",
+      "Notes": "Search required",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "McDonald County MO",
@@ -1148,10 +1230,11 @@
       "Slug": "McDonald_County_MO",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/McDonald_County_MO",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/McDonald_County_MO",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/McDonald_County_MO",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/McDonald_County_MO",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Hopkins Co. Jail, KY",
@@ -1160,10 +1243,11 @@
       "Slug": "HOPKINS_COUNTY_KY",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HOPKINS_COUNTY_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/(S(phfhx5szb2g2qrj2osoivzlq))/jailtracker/index/4/?mobile=0",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/HOPKINS_COUNTY_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/(S(phfhx5szb2g2qrj2osoivzlq))/jailtracker/index/4/?mobile=0",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Allen County Detention Center",
@@ -1172,10 +1256,11 @@
       "Slug": "ALLEN_COUNTY_KY",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/ALLEN_COUNTY_KY",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/ALLEN_COUNTY_KY",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/ALLEN_COUNTY_KY",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/ALLEN_COUNTY_KY",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Perry Co Sheriff IN",
@@ -1184,10 +1269,11 @@
       "Slug": "Perry_County_IN",
       "Usable": true,
       "Has multiple search types": "",
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Perry_County_IN",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Perry_County_IN",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Perry_County_IN",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Perry_County_IN",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Atchison County KS",
@@ -1196,22 +1282,24 @@
       "Slug": "Atchison_County_KS",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Atchison_County_KS",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Atchison_County_KS",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Atchison_County_KS",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Atchison_County_KS",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
       "Title": "Blue Ridge Regional Jail Halifax, VA",
-      "Facility": "",
+      "Facility": "Blue Ridge Regional Jail (Halifax)",
       "State": "VA",
       "Slug": "Blue_Ridge_Regional_VA_Halifax",
       "Usable": true,
       "Has multiple search types": true,
-      "Corrected URL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Blue_Ridge_Regional_VA_Halifax",
-      "Original URL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Blue_Ridge_Regional_VA_Halifax",
-      "Facility URL": "",
-      "Notes": ""
+      "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Blue_Ridge_Regional_VA_Halifax",
+      "OriginalURL": "https://omsweb.public-safety-cloud.com/jtclientwebofficial/jailtracker/index/Blue_Ridge_Regional_VA_Halifax",
+      "FacilityURL": "",
+      "Notes": "",
+      "BaseURL": "https://omsweb.public-safety-cloud.com"
     }
   ]
 }
