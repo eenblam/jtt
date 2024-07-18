@@ -906,11 +906,11 @@
       "Facility": "",
       "State": "IN",
       "Slug": "Putnam_County_In",
-      "Usable": true,
+      "Usable": false,
       "HasAdvancedSearch": false,
       "IndexURL": "https://omsweb.public-safety-cloud.com/jtclientweb/jailtracker/index/Putnam_County_In",
       "FacilityURL": "",
-      "Notes": "",
+      "Notes": "Doesn't record charges",
       "BaseURL": "https://omsweb.public-safety-cloud.com"
     },
     {
