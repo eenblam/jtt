@@ -166,17 +166,18 @@ func (i *Inmate) Update(j *Jail) error {
 	i.Holds = inmateResponse.Holds
 	for _, specialField := range inmateResponse.SpecialFields {
 		switch specialField.LabelText {
-		case "Sched Release":
+		// Yes, these end in colons
+		case "Sched Release:":
 			i.SpecialSchedRelease = specialField.Value
-		case "Booking Date":
+		case "Booking Date:":
 			i.SpecialBookingDate = specialField.Value
-		case "Date Released":
+		case "Date Released:":
 			i.SpecialDateReleased = specialField.Value
-		case "Arrest Date":
+		case "Arrest Date:":
 			i.SpecialArrestDate = specialField.Value
-		case "Arresting Agency":
+		case "Arresting Agency:":
 			i.SpecialArrestingAgency = specialField.Value
-		case "Arresting Officer":
+		case "Arresting Officer:":
 			i.SpecialArrestingOfficer = specialField.Value
 		}
 	}
