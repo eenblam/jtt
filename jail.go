@@ -109,7 +109,6 @@ func (j *Jail) UpdateInmates() error {
 		time.Sleep(duration)
 
 		inmate := &j.Offenders[i]
-		//err := j.UpdateInmate(inmate)
 		err := inmate.Update(j)
 		if err != nil {
 			log.Printf("failed to update inmate \"%s\": %v", inmate.ArrestNo, err)
