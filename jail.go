@@ -23,6 +23,8 @@ type JailResponse struct {
 	ErrorMessage string `json:"errorMessage"`
 }
 
+// Jail is a top-level struct for a task to retrieve the list of inmates in a jail.
+// This is also the type used to serialize to JSON for storage.
 type Jail struct {
 	// BaseURL for the jail. Usually "https://omsweb.public-safety-cloud.com", but not always!
 	BaseURL string
@@ -34,12 +36,17 @@ type Jail struct {
 	Offenders []Inmate
 	// Each request (after validation) updates this key!
 	OffenderViewKey int
+	// When the job started
+	StartTimeUTC time.Time
+	// When the job ended
+	EndTimeUTC time.Time
 }
 
 func NewJail(baseURL, name string) (*Jail, error) {
 	j := &Jail{
-		BaseURL: baseURL,
-		Name:    name,
+		BaseURL:      baseURL,
+		Name:         name,
+		StartTimeUTC: time.Now().UTC(),
 	}
 	if err := j.updateCaptcha(); err != nil {
 		return nil, fmt.Errorf("failed to update captcha: %w", err)
@@ -138,5 +145,6 @@ func CrawlJail(baseURL, name string) (*Jail, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to update inmates: %w", err)
 	}
+	j.EndTimeUTC = time.Now().UTC()
 	return j, nil
 }
