@@ -49,7 +49,7 @@ func TestPostJSON(t *testing.T) {
 		ResStatus int
 		// Response body we expect the server to respond with
 		ResBytes []byte
-		// What we expect to ResBytes to be unmarshaled to
+		// What we expect ResBytes to be unmarshaled to
 		WantRes Res
 		// Do we expect an error?
 		WantErr bool
